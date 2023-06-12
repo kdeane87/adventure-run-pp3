@@ -1,3 +1,10 @@
-# Your code goes here.
-# You can delete these comments, but do not change the name of this file
-# Write your code to expect a terminal of 80 characters wide and 24 rows high
+def get_username():
+    """
+    Gets the players name
+    """
+    print('Hello')
+    username = input('Enter username:')
+    print('Welcome', username, 'lets get started')
+
+
+get_username()
