@@ -57,11 +57,38 @@ def forest_game():
         exit(play_again())
 
 
-forest_game()    
+#forest_game()    
 
 
 def haunted_house_game():
     """
     Runs the haunted house game
     """
-    
+    answer = input('You find yourself standing outside the foreboding Ravenwood Manor. The moon is full, casting an eerie glow on the dilapidated structure. As you approach the front door, it creaks open, beckoning you inside. Are you brave enough to step into the haunted house?/n a) Enter the manor.\n b) Turn back and leave.')
+    if answer == 'a':
+        a = """
+        You gather your courage and step across the threshold of Ravenwood Manor. The door slams shut behind you, enveloping you in darkness. The air feels heavy, and a chill runs down your spine. You must find a way to uncover the secrets of this haunted house and escape its clutches.
+
+You find yourself in a dimly lit foyer. Cobwebs hang from the ceiling, and dust covers the old furniture. To your left, you notice a grand staircase leading to the upper floors. To your right, a corridor disappears into the darkness.\n a) Ascend the staircase.\n b) Explore the corridor.
+            """
+        print(a)
+    else:
+        a = """
+        You chose to exit the game, thats probably a wise choice!!!
+        """
+        print(a)
+        exit(play_again)
+
+    if answer == 'a':
+        a = """ 
+        You cautiously make your way up the stairs, each step groaning beneath your weight. As you reach the top, you find yourself in a narrow corridor lined with closed doors. A faint draft rustles through the hallway, carrying whispers that echo through the air.\n a)Open the first door on the left.\n b) Open the last door on the right.   
+            """
+        print(a)
+    else:
+        a = """
+        You walk down the corridor. You come to a left turn. Theres a man in the distance, he starts to approach you. Suddenly there is a flash.......GUNSHOT....... You have been Killed. the end!!!
+        """
+        print(a)
+        exit(play_again)
+
+haunted_house_game()        
