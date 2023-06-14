@@ -51,7 +51,10 @@ def forest_game():
                 'You follow the sound and find a wounded wolf. It looks at you with pleading eyes.\n Do you:\n a)Help the wolf \n b) Leave the wolf and continus on your journey\n')
             if answer == 'a':
                 answer = input(('You help the wolf and bandage its wounds. The wolf is greatful and leads you to a hidden clearing. In the center of the clearing, you see a chest.\n Do you: \n a)Open the chest\n b) Leave the chest and continueon your adventure\n'))
-
+                if answer == 'a':
+                    print('the chest blew up')
+                else:
+                    print('should have opened the chest')
             else:
                 print('ah the poor wolf')
 
