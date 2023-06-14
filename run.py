@@ -28,14 +28,20 @@ def play_again():
         print('Ok, lets play again')
     elif answer == 'no':
         print('Goodbye')
+        shuffle_games()
 
 
 # play_again()
 
-# def shuffle_games():
+def shuffle_games():
     """
     Shuffles through the games
     """
+    game1 = forest_game()
+    game2 = haunted_house_game()
+    game3 = city_game()
+
+    list = [game1, game2, game3]
 
 
 def forest_game():
