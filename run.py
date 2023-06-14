@@ -1,5 +1,6 @@
 import random
 
+
 def get_username():
     """
     Gets the players name
@@ -9,11 +10,10 @@ def get_username():
         username = input('Enter username:')
         if username == '':
             print('You must enter a username')
-            continue    
-        else:        
+            continue
+        else:
             print('Welcome', username, 'lets get started')
             break
-        
 
 
 get_username()
@@ -30,10 +30,9 @@ def play_again():
         print('Goodbye')
 
 
+# play_again()
 
-#play_again()
-
-#def shuffle_games():
+# def shuffle_games():
     """
     Shuffles through the games
     """
@@ -48,19 +47,24 @@ def forest_game():
     if answer == 'a':
         answer = input('You enter the forest and walk along the winding path.\n The trees are tall and the leaves rustle in the wind.\n Suddenly you hear a loud growl.\nDo you:\n a)Run away\n b)Investigate the source of the noise\n')
         if answer == 'b':
-            answer = input('You follow the sound and find a wounded wolf. It looks at you with pleading eyes.\n Do you:\n a)Help the wolf \n b) Leave the wolf and continus on your journey\n')
+            answer = input(
+                'You follow the sound and find a wounded wolf. It looks at you with pleading eyes.\n Do you:\n a)Help the wolf \n b) Leave the wolf and continus on your journey\n')
             if answer == 'a':
                 answer = input(('You help the wolf and bandage its wounds. The wolf is greatful and leads you to a hidden clearing. In the center of the clearing, you see a chest.\n Do you: \n a)Open the chest\n b) Leave the chest and continueon your adventure\n'))
-                if answer == 'a':
-                    print('this seems to be working')
+
+            else:
+                print('ah the poor wolf')
+
+        else:
+            print('you ran away')
+
     else:
         print('You left the game\n')
-        #run random game function when created
+        # run random game function when created
         exit(play_again())
-        
 
 
-forest_game()   
+forest_game()
 
 
 def haunted_house_game():
@@ -95,7 +99,7 @@ def haunted_house_game():
         print(a)
         exit(play_again)
 
-#haunted_house_game()        
+# haunted_house_game()
 
 
 def city_game():
