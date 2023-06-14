@@ -1,3 +1,5 @@
+import random
+
 def get_username():
     """
     Gets the players name
@@ -11,6 +13,7 @@ def get_username():
         else:        
             print('Welcome', username, 'lets get started')
             break
+        
 
 
 get_username()
@@ -28,7 +31,12 @@ def play_again():
 
 
 
-#bplay_again()
+#play_again()
+
+#def shuffle_games():
+    """
+    Shuffles through the games
+    """
 
 
 def forest_game():
@@ -38,7 +46,7 @@ def forest_game():
 
     answer = input('You find yourself at the edge of a dense forest. The entrance looks dark and mysterious.\n Do you:\n a)Enter the forest\n b)Walk away and find a new adventure\n')
     if answer == 'a':
-        answer = input('You enter the forest and walk along the winding path.\n The trees are tall and the leaves rustle in the wind.\n Suddenly you hear a loud growl.\nDo you:\n a)Run away\n b)Investigate the source of the noise\n')
+        print('You enter the forest and walk along the winding path.\n The trees are tall and the leaves rustle in the wind.\n Suddenly you hear a loud growl.\nDo you:\n a)Run away\n b)Investigate the source of the noise\n')
     else:
         print('You left the game\n')
         #run random game function when created
@@ -92,3 +100,21 @@ You find yourself in a dimly lit foyer. Cobwebs hang from the ceiling, and dust 
         exit(play_again)
 
 haunted_house_game()        
+
+
+def city_game():
+    """
+    Runs the city game
+    """
+    answer = input('Once upon a time, in the bustling city of Eldoria, there lived a brave and curious young woman named Maya. Maya had always been fascinated by legends of hidden treasures, and her heart yearned for adventure. One day, she stumbled upon an ancient map that depicted a mysterious island shrouded in legends and untold riches. Filled with excitement and determination, Maya decided to set sail in search of this legendary island.Maya gathers her supplies and sets sail. After days of navigating treacherous waters, a dense fog engulfs the ship, making it impossible to see the way forward.\n What should Maya do?\n a) Wait on the ship until the fog clears.\n b) Venture into the fog and try to find a way through.')
+    if answer == 'a':
+        a = """
+         Maya decides to wait on the ship until the fog clears. She trusts that patience and caution are the keys to navigating unknown waters safely. As she waits, the fog slowly begins to dissipate, revealing the sight of a magnificent island in the distance.
+          """
+        print(a)
+    else:
+        a = """
+        You chose to exit the game!!!
+        """
+        print(a)
+        exit(play_again)
