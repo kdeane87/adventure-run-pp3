@@ -50,12 +50,25 @@ def forest_game():
             answer = input(
                 'You follow the sound and find a wounded wolf. It looks at you with pleading eyes.\n Do you:\n a)Help the wolf \n b) Leave the wolf and continus on your journey\n')
             if answer == 'a':
-                answer = input(('You help the wolf and bandage its wounds. The wolf is greatful and leads you to a hidden clearing. In the center of the clearing, you see a chest.\n Do you: \n a)Open the chest\n b) Leave the chest and continueon your adventure\n'))
+                answer = input(('You help the wolf and bandage its wounds. The wolf is greatful and leads you to a hidden clearing. In the center of the clearing, you see a chest.\n Do you: \n a)Open the chest\n b) Leave the chest and continue on your adventure\n'))
                 if answer == 'a':
-                    print('the chest blew up')
-                else:
-                    print('should have opened the chest')
-            elif answer == 'b':
+                    print('The chest was full of gold....You Won!')
+                    exit(play_again())
+                elif answer == 'b':
+                    answer = input(
+                        'You leave the wolf and chest behind and continue on your way. You come to a lake, there is a boat at the shore. Do you:\n a) Get into the boat \n b) Turn back')
+                    if answer == 'a':
+                        print('You get into the boat and start rowing out towards what appears to be an island. Suddenly a heavy fog closes in inparing your navigation. As you look over the sides of the boat you notice that theres 5 sharks circuling the boat. The boat begins to take on water and sinks. You are eaten by sharks.....Game over!')
+                    elif answer == 'b':
+                        answer = input(
+                            'You turn around and head back along the path. The wolf is still waiting by the chest, he is gesturing again for you to open it. \n Do you: \n a)Open the chest \n b) Ignore the wolf and keep walking')
+                        if answer == 'a':
+                            print('The chest was full of gold....You Won!')
+                            exit(play_again())
+                        else:
+                            print(
+                                'You keep walking along the path until you fall through a trap door and die.....Game over!')
+                            exit(play_again())
                 answer = input(
                     'You continue along the path leaving the wolf behind. You come to a river with an old wooden bridge. do you:\n a) Cross the bridge \n b)Swim across the river?')
                 if answer == 'a':
