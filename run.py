@@ -46,26 +46,21 @@ def forest_game():
 
     answer = input('You find yourself at the edge of a dense forest. The entrance looks dark and mysterious.\n Do you:\n a)Enter the forest\n b)Walk away and find a new adventure\n')
     if answer == 'a':
-        print('You enter the forest and walk along the winding path.\n The trees are tall and the leaves rustle in the wind.\n Suddenly you hear a loud growl.\nDo you:\n a)Run away\n b)Investigate the source of the noise\n')
+        answer = input('You enter the forest and walk along the winding path.\n The trees are tall and the leaves rustle in the wind.\n Suddenly you hear a loud growl.\nDo you:\n a)Run away\n b)Investigate the source of the noise\n')
+        if answer == 'b':
+            answer = input('You follow the sound and find a wounded wolf. It looks at you with pleading eyes.\n Do you:\n a)Help the wolf \n b) Leave the wolf and continus on your journey\n')
+            if answer == 'a':
+                answer = input(('You help the wolf and bandage its wounds. The wolf is greatful and leads you to a hidden clearing. In the center of the clearing, you see a chest.\n Do you: \n a)Open the chest\n b) Leave the chest and continueon your adventure\n'))
+                if answer == 'a':
+                    print('this seems to be working')
     else:
         print('You left the game\n')
         #run random game function when created
         exit(play_again())
         
-    if answer == 'b':
-        print('You follow the sound and find a wounded wolf. It looks at you with pleading eyes.\n Do you:\n a)Help the wolf \n b) Leave the wolf and continus on your journey')
-    else:
-        print('You ran away. Game over!!!')
-        exit(play_again())
-
-    if answer == 'a':
-        print('You help the wolf and bandage its wounds. The wolf is greatful and leads you to a hidden clearing. In the center of the clearing, you see a chest.\n Do you: \n a)Open the chest\n b) Leave the chest and continueon your adventure')
-    else:
-        print('You leave the wolf behind and keep following the path ahead. As you continue you SUDDENLY fall through a trap door and plummet to your death!!!!\n')
-        exit(play_again())
 
 
-#forest_game()    
+forest_game()   
 
 
 def haunted_house_game():
@@ -77,9 +72,10 @@ def haunted_house_game():
         a = """
         You gather your courage and step across the threshold of Ravenwood Manor. The door slams shut behind you, enveloping you in darkness. The air feels heavy, and a chill runs down your spine. You must find a way to uncover the secrets of this haunted house and escape its clutches.
 
-You find yourself in a dimly lit foyer. Cobwebs hang from the ceiling, and dust covers the old furniture. To your left, you notice a grand staircase leading to the upper floors. To your right, a corridor disappears into the darkness.\n a) Ascend the staircase.\n b) Explore the corridor.
+        You find yourself in a dimly lit foyer. Cobwebs hang from the ceiling, and dust covers the old furniture. To your left, you notice a grand staircase leading to the upper floors. To your right, a corridor disappears into the darkness.\n a) Ascend the staircase.\n b) Explore the corridor.
             """
         print(a)
+        answer
     else:
         a = """
         You chose to exit the game, thats probably a wise choice!!!
@@ -99,7 +95,7 @@ You find yourself in a dimly lit foyer. Cobwebs hang from the ceiling, and dust 
         print(a)
         exit(play_again)
 
-haunted_house_game()        
+#haunted_house_game()        
 
 
 def city_game():
