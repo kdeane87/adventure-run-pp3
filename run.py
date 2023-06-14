@@ -55,11 +55,20 @@ def forest_game():
                     print('the chest blew up')
                 else:
                     print('should have opened the chest')
-            else:
-                print('ah the poor wolf')
+            elif answer == 'b':
+                answer = input(
+                    'You continue along the path leaving the wolf behind. You come to a river with an old wooden bridge. do you:\n a) Cross the bridge \n b)Swim across the river?')
+                if answer == 'a':
+                    print(
+                        'The bridge collapsed and you were eaten by alligators.....Game over!')
+                    exit(play_again())
+                else:
+                    print(
+                        'The river was full of alligators and you were eaten.....Game over!')
+                    exit(play_again())
 
         else:
-            print('you ran away')
+            print('You ran away, Game over!')
 
     else:
         print('You left the game\n')
