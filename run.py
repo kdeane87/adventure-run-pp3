@@ -141,5 +141,20 @@ def crossroads_game():
     answer = input('You find yourself standing at a crossroad, not knowing which path to take. You have two options: \n a)The mountain trail \n b) The coastal route \n')
     if answer == 'a':
         answer = input('Great choice! You decide to embark on the Mountain Trail. As you start your ascent, the air becomes crisper, and the scenery more breathtaking. The trail winds its way through dense pine forests and rocky terrain. After walking for a while, you stumble upon a fork in the path. You notice a signpost, but it is worn and difficult to read. There seem to be two options: \n a) The narrow pass \n b) The steep climb \n')
+        if answer == 'a':
+            answer = input('You decide to take the Narrow Pass. The path becomes increasingly narrow and steep as you make your way through the rugged mountainside. The air feels cooler, and you can hear the sound of rushing water in the distance. As you continue, you encounter a fallen tree blocking the path. It seems like you will not be able to pass through it easily. What would you like to do? \n a) Attempt to climb over the fallen tree \n b) Look for an alternative route \n')
+            if answer == 'a':
+                answer = input('You decide to attempt to climb over the fallen tree. With careful steps and a bit of effort, you manage to scramble over the obstacle and continue along the Narrow Pass. The trail starts to descend gradually, and you can hear the sound of a nearby waterfall growing louder. As you approach the source of the sound, you come across a stunning waterfall cascading down a series of rocky cliffs. It is a breathtaking sight. However, the path ahead seems to split into two distinct routes: \n a) Follow the path leading closer to the waterfall \n b) Take the path that veers away from the waterfall')
+                if answer == 'a':
+                    answer = input('You choose to follow the path leading closer to the waterfall. The sound of rushing water becomes even more thunderous as you approach. The path becomes misty, and you can feel a refreshing spray on your face. The closer you get, the more mesmerizing the waterfall becomes, its powerful currents crashing against the rocks below. As you stand in awe, you notice a small cave tucked behind the waterfall. It is shrouded in mystery and beckons you to explore its depths. What would you like to do? \n a) Enter the cave and explore its secrets \n b) Continue along the path, leaving the cave behind \n')
+                    if answer = 'a':
+                        print('You decide to enter the cave and explore its secrets. With cautious steps, you make your way through the veil of the waterfall and enter the dark, damp cave. Inside, the sound of the waterfall is muffled, and a sense of mystery fills the air. As you venture deeper into the cave, you notice faint glimmers of light coming from an opening up ahead. Your curiosity drives you forward, and as you reach the opening, you find yourself in a hidden chamber adorned with sparkling crystals. The sight is truly awe-inspiring. However, as you marvel at the beauty around you, you unintentionally trigger a hidden mechanism. The chamber starts to rumble, and the entrance you came through begins to close. Panicking, you search for a way out but find yourself trapped. Unfortunately, this marks the end of your adventure. Remember, in the unpredictable world of exploration, every choice carries consequences. Feel free to start a new adventure, and may luck be on your side next time!')
+                        exit(play_again)
+                elif answer == 'b':
+                    answer = input('')
+            elif answer == 'b':
+                answer = input('')
+        elif answer == 'b':
+            answer = input('')
     elif answer == 'b':
         answer = input('')
