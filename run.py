@@ -178,7 +178,19 @@ def crossroads_game():
                     print('Oh no! As you decide to leave the treasure chest behind and continue on the trail, an unexpected turn of events occurs. Without warning, the ground beneath you gives way, and you find yourself falling into a hidden crevice. The fall proves fatal, and your adventure comes to an untimely end. Thank you for playing the interactive adventure game! If you would like to try again or explore a different path, feel free to start a new game.\n')
                     exit(play_again)
     elif answer == 'b':
-        answer = input('')
+        answer = input('You decide to take the Coastal Route. As you walk along the path, the sound of crashing waves fills the air, and a refreshing sea breeze brushes against your face. The path winds its way along rugged cliffs, offering breathtaking views of the sparkling ocean below. After walking for a while, you come across a small fishing village. The villagers are friendly and offer you a warm welcome. They tell you about a legendary treasure hidden on a nearby island but warn you about the dangerous sea creatures that guard it. \nYou have two choices:\n a) Embark on a boat to search for the hidden treasure \n b) Explore the village and interact with the villagers\n')
+        if answer == 'a':
+            answer = input("Excited by the prospect of finding the hidden treasure, you decide to embark on a boat and set off on your adventure. The villagers provide you with a sturdy vessel and a map that marks the location of the island where the treasure is said to be hidden.\nAs you row further away from the village, the sea becomes rougher, and dark clouds gather in the sky. The waves crash against the sides of the boat, testing your determination. But you push forward, fueled by the allure of the treasure.\nAfter what feels like an eternity of battling the elements, you finally spot the island on the horizon. It is surrounded by treacherous rocks and strong currents. As you approach, you notice a cave entrance that seems to lead deeper into the island.\nYou have two choices:\n a) Navigate through the treacherous rocks and currents to reach the cave entrance\n b) Anchor the boat and explore the shoreline of the island\n ")
+            if answer == 'a':
+                answer = input("With determination in your heart, you carefully navigate through the treacherous rocks and currents, steering the boat towards the cave entrance. The waves crash against the sides of the vessel, challenging your skill as a sailor.\nAfter a heart-pounding journey, you successfully enter the cave. Inside, you find yourself surrounded by darkness, the only source of light coming from a small opening above. As you explore deeper, the cave starts to reveal its secrets.\nYou stumble upon a series of puzzles and challenges that guard the path to the treasure. It seems the ancient guardians of the treasure have set up these obstacles to protect it from intruders like yourself.\nYou have two choices:\n a) Take on the puzzles and challenges head-on, solving each one as you progress deeper into the cave\n b) Retreat from the cave and explore the island's shoreline instead")
+                if answer == 'a':
+                    print()
+                elif answer == 'b':
+                    answer = input()
+            elif answer == 'b':
+                answer = input()
+        elif answer == 'b':
+            answer = input()
 
 
 def main():
