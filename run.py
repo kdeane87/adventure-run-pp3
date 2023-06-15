@@ -172,8 +172,11 @@ def crossroads_game():
             elif answer == 'b':
                 answer = imput('You decide to continue on the trail, leaving the cave behind for now. The path becomes less steep, and you can see the magnificent view opening up before you. The sun shines brightly, casting a golden glow on the surrounding peaks and valleys. As you hike further, you notice a peculiar object glinting in the distance. As you approach, you realize it is a weathered treasure chest half-buried in the ground. It seems like a relic from a bygone era. \nWhat will you do? \n a) Open the treasure chest \n b) Leave the treasure chest and continue on the trail\n')
                 if answer == 'a':
-                    print('You cannot resist the allure of the treasure chest and decide to open it. With a creak, the lid swings open, revealing a sparkling collection of jewels, gold coins, and ancient artifacts. You've stumbled upon a treasure trove! Congratulations! You have successfully completed the adventure by finding the hidden treasure. You can now bask in your newfound wealth and enjoy the rest of your journey knowing that you've had a truly remarkable adventure.\n')
+                    print('You cannot resist the allure of the treasure chest and decide to open it. With a creak, the lid swings open, revealing a sparkling collection of jewels, gold coins, and ancient artifacts. You have stumbled upon a treasure trove! Congratulations! You have successfully completed the adventure by finding the hidden treasure. You can now bask in your newfound wealth and enjoy the rest of your journey knowing that you have had a truly remarkable adventure.\n')
+                    exit(play_again)
                 elif answer == 'b':
+                    print('Oh no! As you decide to leave the treasure chest behind and continue on the trail, an unexpected turn of events occurs. Without warning, the ground beneath you gives way, and you find yourself falling into a hidden crevice. The fall proves fatal, and your adventure comes to an untimely end. Thank you for playing the interactive adventure game! If you would like to try again or explore a different path, feel free to start a new game.\n')
+                    exit(play_again)
     elif answer == 'b':
         answer = input('')
 
