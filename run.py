@@ -37,11 +37,12 @@ def shuffle_games():
     """
     Shuffles through the games
     """
-    game1 = forest_game()
-    game2 = haunted_house_game()
-    game3 = city_game()
+    game_list = [forest_game(), haunted_house_game(), city_game()]
+    random.shuffle(game_list)
+    print(game_list)
 
-    list = [game1, game2, game3]
+
+shuffle_games()
 
 
 def forest_game():
@@ -95,7 +96,7 @@ def forest_game():
         exit(play_again())
 
 
-forest_game()
+# forest_game()
 
 
 def haunted_house_game():
@@ -133,19 +134,12 @@ def haunted_house_game():
 # haunted_house_game()
 
 
-def city_game():
+def crossroads_game():
     """
-    Runs the city game
+    Runs the crossroads game
     """
-    answer = input('Once upon a time, in the bustling city of Eldoria, there lived a brave and curious young woman named Maya. Maya had always been fascinated by legends of hidden treasures, and her heart yearned for adventure. One day, she stumbled upon an ancient map that depicted a mysterious island shrouded in legends and untold riches. Filled with excitement and determination, Maya decided to set sail in search of this legendary island.Maya gathers her supplies and sets sail. After days of navigating treacherous waters, a dense fog engulfs the ship, making it impossible to see the way forward.\n What should Maya do?\n a) Wait on the ship until the fog clears.\n b) Venture into the fog and try to find a way through.')
+    answer = input('You find yourself standing at a crossroad, not knowing which path to take. You have two options: \n a)The mountain trail \n b) The coastal route \n')
     if answer == 'a':
-        a = """
-         Maya decides to wait on the ship until the fog clears. She trusts that patience and caution are the keys to navigating unknown waters safely. As she waits, the fog slowly begins to dissipate, revealing the sight of a magnificent island in the distance.
-          """
-        print(a)
-    else:
-        a = """
-        You chose to exit the game!!!
-        """
-        print(a)
-        exit(play_again)
+        answer = input('Great choice! You decide to embark on the Mountain Trail. As you start your ascent, the air becomes crisper, and the scenery more breathtaking. The trail winds its way through dense pine forests and rocky terrain. After walking for a while, you stumble upon a fork in the path. You notice a signpost, but it is worn and difficult to read. There seem to be two options: \n a) The narrow pass \n b) The steep climb \n')
+    elif answer == 'b':
+        answer = input('')
