@@ -16,9 +16,6 @@ def get_username():
             break
 
 
-get_username()
-
-
 def play_again():
     """
     This is called after game is over and gives choice to play again
@@ -26,23 +23,9 @@ def play_again():
     answer = input('Do you want to play again? \n yes or no \n')
     if answer == 'yes':
         print('Ok, lets play again')
+        shuffle_games()
     elif answer == 'no':
         print('Goodbye')
-       # shuffle_games()
-
-
-# play_again()
-'''
-def shuffle_games():
-    """
-    Shuffles through the games
-    """
-    random.shuffle(game_list)
-    print(game_list)
-
-
-# shuffle_games()
-'''
 
 
 def forest_game():
@@ -72,7 +55,7 @@ def forest_game():
                         if answer == 'a':
                             print('The chest was full of gold....You Won!')
                             exit(play_again())
-                        else:
+                        elif answer == 'b':
                             print(
                                 'You keep walking along the path until you fall through a trap door and die.....Game over!')
                             exit(play_again())
@@ -82,12 +65,12 @@ def forest_game():
                     print(
                         'The bridge collapsed and you were eaten by alligators.....Game over!')
                     exit(play_again())
-                else:
+                elif answer == 'b':
                     print(
                         'The river was full of alligators and you were eaten.....Game over!')
                     exit(play_again())
 
-        elif answer == 'b':
+        elif answer == 'a':
             print('You ran away, Game over!')
             exit(play_again())
 
@@ -216,15 +199,17 @@ def shuffle_games():
     game3 = crossroads_game()
 
     game_list = [game1, game2, game3]
-    for game in random(len(game_list)):
-        print(game_list[game])
+    for game in range(len(game_list)):
+        return (game_list[game])
 
 
 def main():
     """
     Main function that calls all functions
     """
+    get_username()
     shuffle_games()
+    play_again()
 
 
 main()
