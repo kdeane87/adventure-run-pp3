@@ -17,7 +17,6 @@ def get_username():
 
 
 get_username()
-crossroads_game()
 
 
 def play_again():
@@ -161,4 +160,11 @@ def crossroads_game():
         answer = input('')
 
 
-crossroads_game()
+def main():
+    """
+    Main function that calls all functions
+    """
+    crossroads_game()
+
+
+main()
