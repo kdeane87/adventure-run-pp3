@@ -184,9 +184,10 @@ def crossroads_game():
             if answer == 'a':
                 answer = input("With determination in your heart, you carefully navigate through the treacherous rocks and currents, steering the boat towards the cave entrance. The waves crash against the sides of the vessel, challenging your skill as a sailor.\nAfter a heart-pounding journey, you successfully enter the cave. Inside, you find yourself surrounded by darkness, the only source of light coming from a small opening above. As you explore deeper, the cave starts to reveal its secrets.\nYou stumble upon a series of puzzles and challenges that guard the path to the treasure. It seems the ancient guardians of the treasure have set up these obstacles to protect it from intruders like yourself.\nYou have two choices:\n a) Take on the puzzles and challenges head-on, solving each one as you progress deeper into the cave\n b) Retreat from the cave and explore the island's shoreline instead")
                 if answer == 'a':
-                    print()
+                    print("Oh no! As you bravely take on the puzzles and challenges, you encounter a particularly tricky one that triggers a trap. Suddenly, the ground beneath you gives way, and you plummet into a deep chasm. Your adventure comes to an unfortunate end as you meet your demise\n")
+                    exit(play_again)
                 elif answer == 'b':
-                    answer = input()
+                    answer = input("Deciding to take a break from the puzzles and challenges in the cave, you retreat back to the shoreline of the island. As you explore, you come across a secluded beach with shimmering golden sand. The soothing sound of the waves crashing against the shore relaxes your mind.\nWhile walking along the beach, you notice an old, weathered map half-buried in the sand. Curiosity piqued, you pick it up and examine it closely. It appears to be a treasure map, indicating the location of another hidden treasure somewhere on the island.\nYou have two choices:\n a) Follow the clues on the map and embark on a new treasure hunt\n b) Return to the cave and resume tackling the puzzles and challenges\n")
             elif answer == 'b':
                 answer = input()
         elif answer == 'b':
