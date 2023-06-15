@@ -17,6 +17,7 @@ def get_username():
 
 
 get_username()
+crossroads_game()
 
 
 def play_again():
@@ -28,7 +29,7 @@ def play_again():
         print('Ok, lets play again')
     elif answer == 'no':
         print('Goodbye')
-        shuffle_games()
+       # shuffle_games()
 
 
 # play_again()
@@ -42,7 +43,7 @@ def shuffle_games():
     print(game_list)
 
 
-shuffle_games()
+# shuffle_games()
 
 
 def forest_game():
@@ -147,7 +148,7 @@ def crossroads_game():
                 answer = input('You decide to attempt to climb over the fallen tree. With careful steps and a bit of effort, you manage to scramble over the obstacle and continue along the Narrow Pass. The trail starts to descend gradually, and you can hear the sound of a nearby waterfall growing louder. As you approach the source of the sound, you come across a stunning waterfall cascading down a series of rocky cliffs. It is a breathtaking sight. However, the path ahead seems to split into two distinct routes: \n a) Follow the path leading closer to the waterfall \n b) Take the path that veers away from the waterfall')
                 if answer == 'a':
                     answer = input('You choose to follow the path leading closer to the waterfall. The sound of rushing water becomes even more thunderous as you approach. The path becomes misty, and you can feel a refreshing spray on your face. The closer you get, the more mesmerizing the waterfall becomes, its powerful currents crashing against the rocks below. As you stand in awe, you notice a small cave tucked behind the waterfall. It is shrouded in mystery and beckons you to explore its depths. What would you like to do? \n a) Enter the cave and explore its secrets \n b) Continue along the path, leaving the cave behind \n')
-                    if answer = 'a':
+                    if answer == 'a':
                         print('You decide to enter the cave and explore its secrets. With cautious steps, you make your way through the veil of the waterfall and enter the dark, damp cave. Inside, the sound of the waterfall is muffled, and a sense of mystery fills the air. As you venture deeper into the cave, you notice faint glimmers of light coming from an opening up ahead. Your curiosity drives you forward, and as you reach the opening, you find yourself in a hidden chamber adorned with sparkling crystals. The sight is truly awe-inspiring. However, as you marvel at the beauty around you, you unintentionally trigger a hidden mechanism. The chamber starts to rumble, and the entrance you came through begins to close. Panicking, you search for a way out but find yourself trapped. Unfortunately, this marks the end of your adventure. Remember, in the unpredictable world of exploration, every choice carries consequences. Feel free to start a new adventure, and may luck be on your side next time!')
                         exit(play_again)
                 elif answer == 'b':
@@ -158,3 +159,6 @@ def crossroads_game():
             answer = input('')
     elif answer == 'b':
         answer = input('')
+
+
+crossroads_game()
