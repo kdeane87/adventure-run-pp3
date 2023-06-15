@@ -188,6 +188,11 @@ def crossroads_game():
                     exit(play_again)
                 elif answer == 'b':
                     answer = input("Deciding to take a break from the puzzles and challenges in the cave, you retreat back to the shoreline of the island. As you explore, you come across a secluded beach with shimmering golden sand. The soothing sound of the waves crashing against the shore relaxes your mind.\nWhile walking along the beach, you notice an old, weathered map half-buried in the sand. Curiosity piqued, you pick it up and examine it closely. It appears to be a treasure map, indicating the location of another hidden treasure somewhere on the island.\nYou have two choices:\n a) Follow the clues on the map and embark on a new treasure hunt\n b) Return to the cave and resume tackling the puzzles and challenges\n")
+                    if answer == 'a':
+                        print("Oh no! As you follow the clues on the map, you find yourself in a dense jungle, filled with unknown dangers and obstacles. The path becomes increasingly treacherous, and you accidentally trigger a hidden trap. Suddenly, a spiked net falls from above, trapping you and causing severe injuries.\nWith no one around to help, your adventure sadly comes to an abrupt end.\n")
+                        exit(play_again)
+                    elif answer == 'b':
+                        print("As you make your way back to the cave, ready to face the puzzles and challenges once again, a sudden and unexpected event occurs. The ground beneath you starts to shake violently, and the walls of the cave begin to crumble. Rocks and debris rain down, blocking your path and trapping you inside.\nDespite your best efforts to escape, the collapsing cave proves to be too dangerous. Tragically, you are unable to find a way out, and the adventure comes to an unfortunate end.\n")
             elif answer == 'b':
                 answer = input()
         elif answer == 'b':
