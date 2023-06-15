@@ -193,10 +193,16 @@ def crossroads_game():
                         exit(play_again)
                     elif answer == 'b':
                         print("As you make your way back to the cave, ready to face the puzzles and challenges once again, a sudden and unexpected event occurs. The ground beneath you starts to shake violently, and the walls of the cave begin to crumble. Rocks and debris rain down, blocking your path and trapping you inside.\nDespite your best efforts to escape, the collapsing cave proves to be too dangerous. Tragically, you are unable to find a way out, and the adventure comes to an unfortunate end.\n")
+                        exit(play_again)
             elif answer == 'b':
-                answer = input()
+                print("Congratulations! You choose to anchor the boat and explore the shoreline of the island. As you step onto the sandy beach, you feel a sense of anticipation and wonder. The island is lush and vibrant, with exotic plants and colorful flowers adorning the landscape.\nAs you venture further inland, you stumble upon a hidden path that leads you to a series of ancient ruins. The ruins are overrun with vegetation, but you can still see traces of intricate carvings and faded murals on the walls.\nCuriosity fuels your desire to uncover the secrets of this forgotten civilization. You explore the ruins, carefully navigating through crumbling corridors and chambers. Finally, you come across a hidden chamber at the heart of the ruins.\nInside, you discover a pedestal adorned with ancient symbols. At the center of the pedestal lies a magnificent gemstone, glowing with an otherworldly brilliance. You have found the legendary treasure!\nAs you reach out to grasp the gemstone, a surge of energy courses through your body. The treasure is said to possess mystical powers, and you can feel its magic enveloping you. You have achieved what many adventurers have dreamed of.\nWith the treasure in your possession, you make your way back to the village. The villagers celebrate your triumph and express their gratitude for bringing back a piece of their island's history.\nYou have successfully completed your adventure, and your name will be forever etched in the annals of treasure hunters./n/nWell done, and thank you for playing! If you'd like to embark on another adventure, feel free to start again.\n")
+                exit(play_again)
         elif answer == 'b':
-            answer = input()
+            print("You decide to explore the village and interact with the villagers. As you engage in conversations and learn more about their way of life, you start to feel a sense of belonging and decide to stay in the village for a while. You enjoy the peaceful atmosphere, savoring delicious seafood and listening to the stories of the villagers.\nDays turn into weeks, and before you know it, months have passed. While you've found contentment in the village, you cannot help but wonder about the hidden treasure that was mentioned earlier. Regretfully, you realize that you may have missed out on a great adventure.\nHowever, life in the village brings its own joys and experiences, and you find happiness in the simple pleasures it offers.\nCongratulations! Though you didn't embark on a treasure hunt, you found fulfillment in the village and forged connections with its residents. Remember, every choice in an adventure game leads to a unique outcome. If you'd like, we can start a new adventure. Let me know if you're ready to try again!")
+            exit(play_again)
+    else:
+        print('something went wrong.....Try again!')
+        exit(play_again)
 
 
 def main():
