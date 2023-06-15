@@ -32,17 +32,17 @@ def play_again():
 
 
 # play_again()
-
+'''
 def shuffle_games():
     """
     Shuffles through the games
     """
-    game_list = [forest_game(), haunted_house_game(), city_game()]
     random.shuffle(game_list)
     print(game_list)
 
 
 # shuffle_games()
+'''
 
 
 def forest_game():
@@ -87,16 +87,16 @@ def forest_game():
                         'The river was full of alligators and you were eaten.....Game over!')
                     exit(play_again())
 
-        else:
+        elif answer == 'b':
             print('You ran away, Game over!')
+            exit(play_again())
 
     else:
         print('You left the game\n')
         # run random game function when created
         exit(play_again())
 
-
-# forest_game()
+    return forest_game
 
 
 def haunted_house_game():
@@ -131,7 +131,7 @@ def haunted_house_game():
         print(a)
         exit(play_again)
 
-# haunted_house_game()
+    return haunted_house_game
 
 
 def crossroads_game():
@@ -204,12 +204,27 @@ def crossroads_game():
         print('something went wrong.....Try again!')
         exit(play_again)
 
+    return crossroads_game
+
+
+def shuffle_games():
+    """
+    shuffles through the games
+    """
+    game1 = forest_game()
+    game2 = haunted_house_game()
+    game3 = crossroads_game()
+
+    game_list = [game1, game2, game3]
+    for game in random(len(game_list)):
+        print(game_list[game])
+
 
 def main():
     """
     Main function that calls all functions
     """
-    crossroads_game()
+    shuffle_games()
 
 
 main()
