@@ -169,6 +169,11 @@ def crossroads_game():
             if answer == 'a':
                 print('You bravely decide to enter the cave, intrigued by what secrets it might hold. The inside of the cave is dimly lit, and you can hear the sound of dripping water echoing through the chamber. As you cautiously make your way deeper into the cave, you stumble upon a hidden treasure chest resting on a stone pedestal. You approach the chest with a mix of excitement and trepidation. With trembling hands, you slowly lift the lid, and to your amazement, it reveals a dazzling array of jewels, gold coins, and ancient artifacts. You have stumbled upon a long-lost treasure! Overwhelmed by your discovery, you realize that this adventure has come to a fortunate end. With the treasure in your possession, you exit the cave and make your way back down the mountain, carrying the memories of this incredible journey with you. Congratulations on completing the adventure! Thank you for playing. If you would like to embark on another adventure, feel free to start a new game.')
                 exit(play_again)
+            elif answer == 'b':
+                answer = imput('You decide to continue on the trail, leaving the cave behind for now. The path becomes less steep, and you can see the magnificent view opening up before you. The sun shines brightly, casting a golden glow on the surrounding peaks and valleys. As you hike further, you notice a peculiar object glinting in the distance. As you approach, you realize it is a weathered treasure chest half-buried in the ground. It seems like a relic from a bygone era. \nWhat will you do? \n a) Open the treasure chest \n b) Leave the treasure chest and continue on the trail\n')
+                if answer == 'a':
+                    print('You cannot resist the allure of the treasure chest and decide to open it. With a creak, the lid swings open, revealing a sparkling collection of jewels, gold coins, and ancient artifacts. You've stumbled upon a treasure trove! Congratulations! You have successfully completed the adventure by finding the hidden treasure. You can now bask in your newfound wealth and enjoy the rest of your journey knowing that you've had a truly remarkable adventure.\n')
+                elif answer == 'b':
     elif answer == 'b':
         answer = input('')
 
