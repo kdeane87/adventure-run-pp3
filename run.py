@@ -36,9 +36,11 @@ def forest_game():
     Runs the forest themed game
     """
 
-    answer = input('''You find yourself at the edge of a dense forest. 
-                    The entrance looks dark and mysterious.\n Do you:\n    
-                    a)Enter the forest\n b)Walk away and find a new adventure\n''')
+    answer = input('''
+    You find yourself at the edge of a dense forest. 
+    The entrance looks dark and mysterious.\n Do you:\n    
+    a)Enter the forest\n 
+    b)Walk away and find a new adventure\n''')
     if answer == 'a':
         answer = input('You enter the forest and walk along the winding path.\n The trees are tall and the leaves rustle in the wind.\n Suddenly you hear a loud growl.\nDo you:\n a)Run away\n b)Investigate the source of the noise\n')
         if answer == 'b':
