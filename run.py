@@ -141,7 +141,7 @@ def crossroads_game():
         You notice a signpost, but it is worn and difficult to read.
         There seem to be two options:\n
         a) The narrow pass \n
-        b) The steep climb \n''')
+        b) The steep climb \n''').lower().strip()
         if answer == 'a':
             answer = input('''
             You decide to take the Narrow Pass.
@@ -151,7 +151,7 @@ def crossroads_game():
             It seems like you will not be able to pass through it easily.
             What would you like to do? \n
             a) Attempt to climb over the fallen tree \n
-            b) Look for an alternative route \n''')
+            b) Look for an alternative route \n''').lower().strip()
             if answer == 'a':
                 answer = input('''
                 You decide to attempt to climb over the fallen tree.
@@ -160,7 +160,7 @@ def crossroads_game():
                 As you approach the source of the sound, you come across a stunning waterfall cascading down a series of rocky cliffs.
                 It is a breathtaking sight. However, the path ahead seems to split into two distinct routes: \n
                 a) Follow the path leading closer to the waterfall \n
-                b) Take the path that veers away from the waterfall\n''')
+                b) Take the path that veers away from the waterfall\n''').lower().strip()
                 if answer == 'a':
                     answer = input('''
                     You choose to follow the path leading closer to the waterfall.
@@ -171,7 +171,7 @@ def crossroads_game():
                     It is shrouded in mystery and beckons you to explore its depths.
                     What would you like to do? \n
                     a) Enter the cave and explore its secrets \n
-                    b) Continue along the path, leaving the cave behind \n''')
+                    b) Continue along the path, leaving the cave behind \n''').lower().strip()
                     if answer == 'a':
                         print('''
                         You decide to enter the cave and explore its secrets.
@@ -207,7 +207,7 @@ def crossroads_game():
                     It looks risky to cross.
                     What would you like to do? \n
                     a) Take a leap of faith and try to cross the bridge \n
-                    b) Look for an alternative route to bypass the bridge \n''')
+                    b) Look for an alternative route to bypass the bridge \n''').lower().strip()
                     if answer == 'a':
                         print('''
                         You gather your courage and decide to take a leap of faith, attempting to cross the old stone bridge.
@@ -260,7 +260,7 @@ def crossroads_game():
             It piques your curiosity.
             Will you enter the cave or continue on the trail? \n
             a) Enter the cave \n
-            b) Continue on the trail\n''')
+            b) Continue on the trail\n''').lower().strip()
             if answer == 'a':
                 print('''
                 You bravely decide to enter the cave, intrigued by what secrets it might hold.
@@ -283,7 +283,7 @@ def crossroads_game():
                 It seems like a relic from a bygone era. \n
                 What will you do? \n
                 a) Open the treasure chest \n
-                b) Leave the treasure chest and continue on the trail\n''')
+                b) Leave the treasure chest and continue on the trail\n''').lower().strip()
                 if answer == 'a':
                     print('''
                     You cannot resist the allure of the treasure chest and decide to open it.
@@ -312,7 +312,7 @@ def crossroads_game():
         They tell you about a legendary treasure hidden on a nearby island but warn you about the dangerous sea creatures that guard it.\n
         You have two choices:\n
         a) Embark on a boat to search for the hidden treasure \n
-        b) Explore the village and interact with the villagers\n''')
+        b) Explore the village and interact with the villagers\n''').lower().strip()
         if answer == 'a':
             answer = input('''
             Excited by the prospect of finding the hidden treasure, you decide to embark on a boat and set off on your adventure.
@@ -325,7 +325,7 @@ def crossroads_game():
             As you approach, you notice a cave entrance that seems to lead deeper into the island.\n
             You have two choices:\n
             a) Navigate through the treacherous rocks and currents to reach the cave entrance\n
-            b) Anchor the boat and explore the shoreline of the island\n ''')
+            b) Anchor the boat and explore the shoreline of the island\n ''').lower().strip()
             if answer == 'a':
                 answer = input('''
                 With determination in your heart, you carefully navigate through the treacherous rocks and currents, steering the boat towards the cave entrance.
@@ -337,7 +337,7 @@ def crossroads_game():
                 It seems the ancient guardians of the treasure have set up these obstacles to protect it from intruders like yourself.\n
                 You have two choices:\n
                 a) Take on the puzzles and challenges head-on, solving each one as you progress deeper into the cave\n
-                b) Retreat from the cave and explore the island's shoreline instead''')
+                b) Retreat from the cave and explore the island's shoreline instead''').lower().strip()
                 if answer == 'a':
                     print('''
                     Oh no!
@@ -355,7 +355,7 @@ def crossroads_game():
                     It appears to be a treasure map, indicating the location of another hidden treasure somewhere on the island.\n
                     You have two choices:\n
                     a) Follow the clues on the map and embark on a new treasure hunt\n
-                    b) Return to the cave and resume tackling the puzzles and challenges\n''')
+                    b) Return to the cave and resume tackling the puzzles and challenges\n''').lower().strip()
                     if answer == 'a':
                         print('''
                         Oh no!
