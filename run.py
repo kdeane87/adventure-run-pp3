@@ -474,7 +474,8 @@ def main():
     Main function that calls all functions
     """
     get_username()
-    shuffle_games()
+    crossroads_game()
+    # shuffle_games()
     play_again()
 
 
