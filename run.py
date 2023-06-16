@@ -53,10 +53,13 @@ def play_again_validation():
         if user_input not in valid_characters:
             print('INVALID: Enter either yes or no!')
 
-        else:
+        elif user_input == 'no':
             break
 
-    print(f'You entered {user_input}')
+        else:
+            shuffle_games()
+
+    print(f'You entered {user_input}, Goodbye!')
 
     return play_again_validation
 
@@ -65,7 +68,10 @@ def play_again():
     """
     This is called after game is over and gives choice to play again
     """
-    answer = input('Do you want to play again? \n yes or no \n')
+    answer = 'a', 'b'
+    print(
+        'Do you want to play again? \n yes or no \n')
+    play_again_validation()
     if answer == 'yes':
         print('Ok, lets play again')
         shuffle_games()
@@ -481,12 +487,13 @@ def main():
     """
     Main function that calls all functions
     """
-    input_validation()
-    get_username()
-    forest_game()
-    crossroads_game()
+    # input_validation()
+    # get_username()
+    # forest_game()
+    # crossroads_game()
     # shuffle_games()
     play_again()
+    # play_again_validation()
 
 
 main()
