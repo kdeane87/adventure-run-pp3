@@ -19,6 +19,25 @@ def get_username():
             break
 
 
+def input_validation():
+    '''
+    Validates the users input
+    '''
+    valid_characters = ('a', 'b')
+
+    while True:
+        print()
+        user_input = input('Enter a) or b)....')
+
+        if user_input not in valid_characters:
+            print('INVALID: Enter either a) or b)!')
+
+        else:
+            break
+
+    print(f'You enter {user_input}')
+
+
 def play_again():
     """
     This is called after game is over and gives choice to play again
@@ -41,15 +60,17 @@ def forest_game():
     The entrance looks dark and mysterious.\n
     Do you:\n    
     a)Enter the forest\n 
-    b)Walk away and find a new adventure\n''').lower().strip()
+    b)Walk away and find a new adventure\n''')
+    input_validation()
     if answer == 'a':
-        answer = input('''
-        You enter the forest and walk along the winding path.\n 
+        print('''
+        You enter the forest and walk along the winding path.\n
         The trees are tall and the leaves rustle in the wind.\n 
         Suddenly you hear a loud growl.\n
         Do you:\n 
         a)Run away\n 
-        b)Investigate the source of the noise\n''').lower().strip()
+        b)Investigate the source of the noise\n''')
+        input_validation()
         if answer == 'b':
             answer = input('''
                 You follow the sound and find a wounded wolf.
@@ -437,6 +458,7 @@ def main():
     """
     Main function that calls all functions
     """
+    input_validation()
     get_username()
     forest_game()
     crossroads_game()
