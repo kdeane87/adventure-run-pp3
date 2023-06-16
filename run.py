@@ -11,6 +11,9 @@ def get_username():
         if username == '':
             print('You must enter a username')
             continue
+        elif username == int:
+            print('Username cannot be a number')
+            continue
         else:
             print('Welcome', username, 'lets get started')
             break
