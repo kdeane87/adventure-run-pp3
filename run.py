@@ -40,14 +40,15 @@ def input_validation():
     return input_validation
 
 
-def play_again_validation():
+def play_again():
     '''
-    Validates the users input
+    This is called after game is over and gives choice to play again
     '''
     valid_characters = ('yes', 'no')
 
     while True:
-        print()
+        print(
+            'Do you want to play again? \n yes or no')
         user_input = input('')
 
         if user_input not in valid_characters:
@@ -61,22 +62,7 @@ def play_again_validation():
 
     print(f'You entered {user_input}, Goodbye!')
 
-    return play_again_validation
-
-
-def play_again():
-    """
-    This is called after game is over and gives choice to play again
-    """
-    answer = 'a', 'b'
-    print(
-        'Do you want to play again? \n yes or no \n')
-    play_again_validation()
-    if answer == 'yes':
-        print('Ok, lets play again')
-        shuffle_games()
-    elif answer == 'no':
-        print('Goodbye')
+    return play_again
 
 
 def forest_game():
@@ -492,8 +478,7 @@ def main():
     # forest_game()
     # crossroads_game()
     # shuffle_games()
-    play_again()
-    # play_again_validation()
+    # play_again()
 
 
 main()
