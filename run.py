@@ -431,7 +431,23 @@ def crossroads_game():
                 If you'd like to embark on another adventure, feel free to start again.\n''')
                 exit(play_again)
         elif answer == 'b':
-            print("You decide to explore the village and interact with the villagers. As you engage in conversations and learn more about their way of life, you start to feel a sense of belonging and decide to stay in the village for a while. You enjoy the peaceful atmosphere, savoring delicious seafood and listening to the stories of the villagers.\nDays turn into weeks, and before you know it, months have passed. While you've found contentment in the village, you cannot help but wonder about the hidden treasure that was mentioned earlier. Regretfully, you realize that you may have missed out on a great adventure.\nHowever, life in the village brings its own joys and experiences, and you find happiness in the simple pleasures it offers.\nCongratulations! Though you didn't embark on a treasure hunt, you found fulfillment in the village and forged connections with its residents. Remember, every choice in an adventure game leads to a unique outcome. If you'd like, we can start a new adventure. Let me know if you're ready to try again!")
+            print('''
+            You decide to explore the village and interact with the villagers.
+            As you engage in conversations and learn more about their way of life,
+            you start to feel a sense of belonging and decide to stay in the village for a while.
+            You enjoy the peaceful atmosphere, savoring delicious seafood and listening to the stories of the villagers.
+            Days turn into weeks, and before you know it, months have passed.
+            While you've found contentment in the village,
+            you cannot help but wonder about the hidden treasure that was mentioned earlier.
+            Regretfully, you realize that you may have missed out on a great adventure.
+            However, life in the village brings its own joys and experiences,
+            and you find happiness in the simple pleasures it offers.
+            Congratulations!
+            Though you didn't embark on a treasure hunt,
+            you found fulfillment in the village and forged connections with its residents.
+            Remember, every choice in an adventure game leads to a unique outcome.
+            If you'd like, we can start a new adventure.
+            Let me know if you're ready to try again!''')
             exit(play_again)
     else:
         print('something went wrong.....Try again!')
