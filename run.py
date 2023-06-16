@@ -37,6 +37,29 @@ def input_validation():
 
     print(f'You enter {user_input}')
 
+    return input_validation
+
+
+def play_again_validation():
+    '''
+    Validates the users input
+    '''
+    valid_characters = ('yes', 'no')
+
+    while True:
+        print()
+        user_input = input('')
+
+        if user_input not in valid_characters:
+            print('INVALID: Enter either yes or no!')
+
+        else:
+            break
+
+    print(f'You entered {user_input}')
+
+    return play_again_validation
+
 
 def play_again():
     """
