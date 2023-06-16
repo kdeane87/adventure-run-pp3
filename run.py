@@ -12,7 +12,7 @@ def get_username():
             print('You must enter a username')
             continue
         elif len(username) > 15:
-            print('Error! Only 15 characters allowed!')
+            raise Exception('Error! Only 15 characters allowed!')
             continue
         else:
             print('Welcome', username, 'lets get started')
@@ -56,7 +56,7 @@ def forest_game():
                 It looks at you with pleading eyes.\n
                 Do you:\n
                 a)Help the wolf \n
-                b) Leave the wolf and continus on your journey\n''').lower().strip()
+                b) Leave the wolf and continus on your journey\n''').lower().strip()  # noqa: E501
             if answer == 'a':
                 answer = input('''
                 You help the wolf and bandage its wounds.
@@ -84,7 +84,7 @@ def forest_game():
                         You are eaten by sharks.....Game over!''')
                     elif answer == 'b':
                         answer = input('''
-                            You turn around and head back along the path.
+                            You turn around and head back along the path. 
                             The wolf is still waiting by the chest, he is gesturing again for you to open it.\n
                             Do you:\n
                             a)Open the chest\n
@@ -438,7 +438,7 @@ def main():
     Main function that calls all functions
     """
     get_username()
-    forest_game
+    forest_game()
     crossroads_game()
     # shuffle_games()
     play_again()
