@@ -12,7 +12,7 @@ def get_username():
             print('You must enter a username')
             continue
         elif len(username) > 15:
-            raise Exception('Error! Only 15 characters allowed!')
+            print('Error! Only 15 characters allowed!')
             continue
         else:
             print('Welcome', username, 'lets get started')
