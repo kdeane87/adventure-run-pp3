@@ -210,7 +210,7 @@ def main():
     """
     Main function that calls all functions
     """
-    get_username()
+    # get_username()
     shuffle_games()
     play_again()
 
