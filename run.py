@@ -11,8 +11,8 @@ def get_username():
         if username == '':
             print('You must enter a username')
             continue
-        elif username == int:
-            print('Username cannot be a number')
+        elif len(username) > 15:
+            print('Error! Only 15 characters allowed!')
             continue
         else:
             print('Welcome', username, 'lets get started')
