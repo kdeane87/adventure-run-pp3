@@ -7,7 +7,7 @@ def get_username():
     """
     print('Hello')
     while True:
-        username = input('Enter username:')
+        username = input('Enter username:').strip()
         if username == '':
             print('You must enter a username')
             continue
