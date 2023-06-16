@@ -56,7 +56,7 @@ def forest_game():
                 It looks at you with pleading eyes.\n
                 Do you:\n
                 a)Help the wolf \n
-                b) Leave the wolf and continus on your journey\n''')
+                b) Leave the wolf and continus on your journey\n''').lower().strip()
             if answer == 'a':
                 answer = input('''
                 You help the wolf and bandage its wounds.
@@ -64,7 +64,7 @@ def forest_game():
                 In the center of the clearing, you see a chest.\n
                 Do you:\n
                 a)Open the chest\n
-                b) Leave the chest and continue on your adventure\n''')
+                b) Leave the chest and continue on your adventure\n''').lower().strip()
                 if answer == 'a':
                     print('The chest was full of gold....You Won!')
                     exit(play_again())
@@ -74,7 +74,7 @@ def forest_game():
                         You come to a lake, there is a boat at the shore.
                         Do you:\n
                         a) Get into the boat\n
-                        b) Turn back \n''')
+                        b) Turn back \n''').lower().strip()
                     if answer == 'a':
                         print('''
                         You get into the boat and start rowing out towards what appears to be an island.
@@ -88,7 +88,7 @@ def forest_game():
                             The wolf is still waiting by the chest, he is gesturing again for you to open it.\n
                             Do you:\n
                             a)Open the chest\n
-                            b) Ignore the wolf and keep walking \n''')
+                            b) Ignore the wolf and keep walking \n''').lower().strip()
                         if answer == 'a':
                             print('The chest was full of gold....You Won!')
                             exit(play_again())
@@ -101,7 +101,7 @@ def forest_game():
                     You come to a river with an old wooden bridge.
                     Do you:\n
                     a) Cross the bridge \n
-                    b)Swim across the river?''')
+                    b)Swim across the river?''').lower().strip()
                 if answer == 'a':
                     print(
                         'The bridge collapsed and you were eaten by alligators.....Game over!')
