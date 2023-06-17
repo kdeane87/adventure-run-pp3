@@ -45,6 +45,10 @@ def play_again():
     This is called after game is over and gives choice to play again
     '''
     valid_characters = ('yes', 'no')
+    game1 = forest_game()
+    game2 = crossroads_game()
+
+    game_list = [game1, game2]
 
     while True:
         print(
@@ -55,13 +59,11 @@ def play_again():
             print('INVALID: Enter either yes or no!')
 
         elif user_input == 'no':
+            print(f'You entered {user_input}, Goodbye!')
             break
 
         else:
-            shuffle_games()
-
-    print(f'You entered {user_input}, Goodbye!')
-
+            forest_game()
     return play_again
 
 
@@ -176,7 +178,6 @@ def forest_game():
 
         elif answer == 'b':
             print('You left the game\n')
-            # run random game function when created
             exit(play_again())
 
         else:
@@ -184,7 +185,7 @@ def forest_game():
                 print('INVALID: Enter either a or b!')
                 continue
 
-        return forest_game
+    return forest_game
 
 
 def crossroads_game():
@@ -193,141 +194,189 @@ def crossroads_game():
     """
     valid_characters = ('a', 'b')
     while True:
-        answer = input('''
-        You find yourself standing at a crossroad, not knowing which path to take.
-        You have two options:\n
-        a)The mountain trail\n
-        b) The coastal route \n''')
+        answer = input(
+            'You find yourself standing at a crossroad,\n'
+            'not knowing which path to take.\n'
+            'You have two options:\n'
+            'a)The mountain trail\n'
+            'b) The coastal route \n')
         if answer == 'a':
-            answer = input('''
-            Great choice! You decide to embark on the Mountain Trail.
-            As you start your ascent, the air becomes crisper, and the scenery more breathtaking.
-            The trail winds its way through dense pine forests and rocky terrain.
-            After walking for a while, you stumble upon a fork in the path.
-            You notice a signpost, but it is worn and difficult to read.
-            There seem to be two options:\n
-            a) The narrow pass \n
-            b) The steep climb \n''').lower().strip()
+            answer = input(
+                'Great choice! You decide to embark on the Mountain Trail.\n'
+                'As you start your ascent, the air becomes crisper,\n'
+                'and the scenery more breathtaking.\n'
+                'The trail winds its way through dense pine forests\n'
+                'and rocky terrain.\n'
+                'After walking for a while,\n'
+                'you stumble upon a fork in the path.\n'
+                'You notice a signpost, but it is worn and difficult to read.\n'
+                'There seem to be two options:\n'
+                'a) The narrow pass\n'
+                'b) The steep climb\n').lower().strip()
             if answer == 'a':
-                answer = input('''
-                You decide to take the Narrow Pass.
-                The path becomes increasingly narrow and steep as you make your way through the rugged mountainside.
-                The air feels cooler, and you can hear the sound of rushing water in the distance.
-                As you continue, you encounter a fallen tree blocking the path.
-                It seems like you will not be able to pass through it easily.
-                What would you like to do? \n
-                a) Attempt to climb over the fallen tree \n
-                b) Look for an alternative route \n''').lower().strip()
+                answer = input(
+                    'You decide to take the Narrow Pass.\n'
+                    'The path becomes increasingly narrow and\n'
+                    'steep as you make your way through the rugged mountainside.\n'
+                    'The air feels cooler, and you can hear the sound\n'
+                    'of rushing water in the distance.\n'
+                    'As you continue,\n'
+                    'you encounter a fallen tree blocking the path.\n'
+                    'It seems like you will not be able to pass through it easily.\n'
+                    'What would you like to do?\n'
+                    'a) Attempt to climb over the fallen tree \n'
+                    'b) Look for an alternative route \n').lower().strip()
                 if answer == 'a':
-                    answer = input('''
-                    You decide to attempt to climb over the fallen tree.
-                    With careful steps and a bit of effort, you manage to scramble over the obstacle and continue along the Narrow Pass.
-                    The trail starts to descend gradually, and you can hear the sound of a nearby waterfall growing louder.
-                    As you approach the source of the sound, you come across a stunning waterfall cascading down a series of rocky cliffs.
-                    It is a breathtaking sight. However, the path ahead seems to split into two distinct routes: \n
-                    a) Follow the path leading closer to the waterfall \n
-                    b) Take the path that veers away from the waterfall\n''').lower().strip()
+                    answer = input(
+                        'You decide to attempt to climb over the fallen tree.\n'
+                        'With careful steps and a bit of effort,\n'
+                        'you manage to scramble over the obstacle and\n'
+                        'continue along the Narrow Pass.\n'
+                        'The trail starts to descend gradually,\n'
+                        'and you can hear the sound of a nearby waterfall growing louder.\n'
+                        'As you approach the source of the sound,\n'
+                        'you come across a stunning waterfall cascading down a series of rocky cliffs.\n'
+                        'It is a breathtaking sight.\n'
+                        'However, the path ahead seems to split into two distinct routes:\n'
+                        'a) Follow the path leading closer to the waterfall\n'
+                        'b) Take the path that veers away from the waterfall\n').lower().strip()
                     if answer == 'a':
-                        answer = input('''
-                        You choose to follow the path leading closer to the waterfall.
-                        The sound of rushing water becomes even more thunderous as you approach.
-                        The path becomes misty, and you can feel a refreshing spray on your face.
-                        The closer you get, the more mesmerizing the waterfall becomes, its powerful currents crashing against the rocks below.
-                        As you stand in awe, you notice a small cave tucked behind the waterfall.
-                        It is shrouded in mystery and beckons you to explore its depths.
-                        What would you like to do? \n
-                        a) Enter the cave and explore its secrets \n
-                        b) Continue along the path, leaving the cave behind \n''').lower().strip()
+                        answer = input(
+                            'You choose to follow the path leading closer to the waterfall.\n'
+                            'The sound of rushing water becomes even more thunderous as you approach.\n'
+                            'The path becomes misty, and you can feel a refreshing spray on your face.\n'
+                            'The closer you get, the more mesmerizing the waterfall becomes,\n'
+                            'its powerful currents crashing against the rocks below.\n'
+                            'As you stand in awe, you notice a small cave tucked behind the waterfall.\n'
+                            'It is shrouded in mystery and beckons you to explore its depths.\n'
+                            'What would you like to do?\n'
+                            'a) Enter the cave and explore its secrets\n'
+                            'b) Continue along the path, leaving the cave behind \n').lower().strip()
                         if answer == 'a':
-                            print('''
-                            You decide to enter the cave and explore its secrets.
-                            With cautious steps, you make your way through the veil of the waterfall and enter the dark, damp cave.
-                            Inside, the sound of the waterfall is muffled, and a sense of mystery fills the air.
-                            As you venture deeper into the cave, you notice faint glimmers of light coming from an opening up ahead.
-                            Your curiosity drives you forward, and as you reach the opening, you find yourself in a hidden chamber adorned with sparkling crystals.
-                            The sight is truly awe-inspiring. However, as you marvel at the beauty around you, you unintentionally trigger a hidden mechanism.
-                            The chamber starts to rumble, and the entrance you came through begins to close.
-                            Panicking, you search for a way out but find yourself trapped.
-                            Unfortunately, this marks the end of your adventure.
-                            Remember, in the unpredictable world of exploration, every choice carries consequences.
-                            Feel free to start a new adventure, and may luck be on your side next time!''')
+                            print(
+                                'You decide to enter the cave and explore its secrets.\n'
+                                'With cautious steps, you make your way through the\n'
+                                'veil of the waterfall and enter the dark, damp cave.\n'
+                                'Inside, the sound of the waterfall is muffled,\n'
+                                'and a sense of mystery fills the air.\n'
+                                'As you venture deeper into the cave,\n'
+                                'you notice faint glimmers of light coming from an opening up ahead.\n'
+                                'Your curiosity drives you forward, and as you reach the opening,\n'
+                                'you find yourself in a hidden chamber adorned with sparkling crystals.\n'
+                                'The sight is truly awe-inspiring. However,\n'
+                                'as you marvel at the beauty around you, you unintentionally trigger a hidden mechanism.\n'
+                                'The chamber starts to rumble,\n'
+                                'and the entrance you came through begins to close.\n'
+                                'Panicking, you search for a way out but find yourself trapped.\n'
+                                'Unfortunately, this marks the end of your adventure.\n'
+                                'Remember, in the unpredictable world of exploration,\n'
+                                'every choice carries consequences.\n'
+                                'Feel free to start a new adventure,\n'
+                                'and may luck be on your side next time!\n')
                             exit(play_again)
                         elif answer == 'b':
-                            print('''
-                            You decide to continue along the path, leaving the cave behind.
-                            As you proceed, the trail begins to wind its way down the mountain, gradually leading you back to lower elevations.
-                            The scenery changes as you descend, transitioning from rocky cliffs to lush greenery and vibrant wildflowers.
-                            After a while, you reach the end of the Mountain Trail.
-                            Congratulations! You have successfully completed your adventure through the mountains, experiencing its challenges and beauty.
-                            Take a moment to appreciate the journey you have had and the memories you have made.
-                            Thank you for playing the interactive adventure game!
-                            If you would like to embark on another adventure or explore a different path, feel free to start a new game.''')
+                            print(
+                                'You decide to continue along the path, leaving the cave behind.\n'
+                                'As you proceed, the trail begins to wind its way down the mountain,\n'
+                                'gradually leading you back to lower elevations.\n'
+                                'The scenery changes as you descend,\n'
+                                'transitioning from rocky cliffs to lush greenery and\n'
+                                'vibrant wildflowers.\n'
+                                'After a while, you reach the end of the Mountain Trail.\n'
+                                'Congratulations! You have successfully completed your adventure\n'
+                                'through the mountains, experiencing its challenges and beauty.\n'
+                                'Take a moment to appreciate the journey you have had and\n'
+                                'the memories you have made.\n'
+                                'Thank you for playing the interactive adventure game!\n'
+                                'If you would like to embark on another adventure\n'
+                                'or explore a different path, feel free to start a new game.\n')
                             exit(play_again)
                         else:
                             if answer not in valid_characters:
                                 print('INVALID: Enter either a or b!')
                                 continue
                     elif answer == 'b':
-                        answer = input('''
-                        You decide to take the path that veers away from the waterfall.
-                        As you move away from the captivating sight of the waterfall, the trail leads you deeper into the mountainous terrain.
-                        The path gradually becomes steeper and more challenging to navigate.
-                        After a while, you stumble upon an ancient stone bridge spanning a deep ravine.
-                        The bridge appears old and weathered, with some missing stones and cracks.
-                        It looks risky to cross.
-                        What would you like to do? \n
-                        a) Take a leap of faith and try to cross the bridge \n
-                        b) Look for an alternative route to bypass the bridge \n''').lower().strip()
+                        answer = input(
+                            'You decide to take the path that veers away from the waterfall.\n'
+                            'As you move away from the captivating sight of the waterfall,\n'
+                            'the trail leads you deeper into the mountainous terrain.\n'
+                            'The path gradually becomes steeper and more challenging to navigate.\n'
+                            'After a while, you stumble upon an ancient stone bridge spanning a deep ravine.\n'
+                            'The bridge appears old and weathered,\n'
+                            'with some missing stones and cracks.\n'
+                            'It looks risky to cross.\n'
+                            'What would you like to do?\n'
+                            'a) Take a leap of faith and try to cross the bridge\n'
+                            'b) Look for an alternative route to bypass the bridge\n').lower().strip()
                     else:
                         if answer not in valid_characters:
                             print('INVALID: Enter either a or b!')
                             continue
                         if answer == 'a':
-                            print('''
-                            You gather your courage and decide to take a leap of faith, attempting to cross the old stone bridge.
-                            Each step feels precarious as you carefully navigate the missing stones and gaps.
-                            The ravine below sends shivers down your spine, but you push forward, determined to reach the other side.
-                            Midway across the bridge, you hear a loud crack, and the bridge gives way beneath your weight.
-                            You desperately try to grab onto something, but it is too late.
-                            You plummet into the ravine, unable to escape the fall.
-                            Unfortunately, your journey ends here.
-                            Thank you for playing the interactive adventure game.
-                            Would you like to start again?''')
+                            print(
+                                'You gather your courage and decide to take a leap of faith,\n'
+                                'attempting to cross the old stone bridge.\n'
+                                'Each step feels precarious as you carefully navigate\n'
+                                'the missing stones and gaps.\n'
+                                'The ravine below sends shivers down your spine,\n'
+                                'but you push forward, determined to reach the other side.\n'
+                                'Midway across the bridge, you hear a loud crack,\n'
+                                'and the bridge gives way beneath your weight.\n'
+                                'You desperately try to grab onto something, but it is too late.\n'
+                                'You plummet into the ravine, unable to escape the fall.\n'
+                                'Unfortunately, your journey ends here.\n'
+                                'Thank you for playing the interactive adventure game.\n'
+                                'Would you like to start again?\n')
                             exit(play_again)
                         elif answer == 'b':
-                            print('''
-                            You decide to look for an alternative route to bypass the bridge.
-                            Carefully scanning the surroundings, you notice a narrow trail leading down the ravine.
-                            It seems like a challenging but possible route to continue your journey.
-                            As you descend down the narrow trail, the terrain becomes increasingly treacherous.
-                            Loose rocks and slippery slopes make it difficult to maintain your footing.
-                            However, your determination pushes you forward.
-                            Eventually, you reach the bottom of the ravine, where you find a hidden cave entrance.
-                            Curiosity piques your interest, and you decide to explore it further.
-                            Inside the cave, you discover a hidden treasure trove filled with precious gems and ancient artifacts.
-                            Congratulations! You have successfully found the hidden treasure and completed your adventure.
-                            You can now revel in your newfound riches and relish the memories of your daring mountain trail journey.
-                            Well done!''')
+                            print(
+                                'You decide to look for an alternative route to bypass the bridge.\n'
+                                'Carefully scanning the surroundings,\n'
+                                'you notice a narrow trail leading down the ravine.\n'
+                                'It seems like a challenging but possible route to continue your journey.\n'
+                                'As you descend down the narrow trail,\n'
+                                'the terrain becomes increasingly treacherous.\n'
+                                'Loose rocks and slippery slopes make it difficult to maintain your footing.\n'
+                                'However, your determination pushes you forward.\n'
+                                'Eventually, you reach the bottom of the ravine,\n'
+                                'where you find a hidden cave entrance.\n'
+                                'Curiosity piques your interest,\n'
+                                'and you decide to explore it further.\n'
+                                'Inside the cave, you discover a hidden treasure trove\n'
+                                'filled with precious gems and ancient artifacts.\n'
+                                'Congratulations! You have successfully found the hidden treasure\n'
+                                'and completed your adventure.\n'
+                                'You can now revel in your newfound riches\n'
+                                'and relish the memories of your daring mountain trail journey.\n'
+                                'Well done!\n')
                             exit(play_again)
                         else:
                             if answer not in valid_characters:
                                 print('INVALID: Enter either a or b!')
                                 continue
                 elif answer == 'b':
-                    print('''You choose to look for an alternate route around the fallen tree.
-                    After carefully scouting the area, you spot a narrow path that veers off to the side, bypassing the obstacle.
-                    You navigate through the path, squeezing between rocks and shrubs until you successfully circumvent the fallen tree.
-                    As you continue on the Narrow Pass, the terrain becomes even more treacherous.
-                    The path narrows to a mere ledge with a sheer drop on one side.
-                    The winds pick up, making it challenging to maintain your balance.
-                    Suddenly, a heavy fog rolls in, reducing visibility to almost zero.
-                    You find yourself disoriented and unsure of which direction to proceed.
-                    Every step feels uncertain, and the danger of slipping off the edge becomes even more real.
-                    With no clear path forward and the risks escalating, you decide it is best to turn back and find an alternative route.
-                    You carefully retrace your steps, keeping close to the mountain wall for safety.
-                    You make it back to the fork in the path and decide to choose a different option on your next adventure.
-                    Thank you for playing!
-                    If you would like to try again or explore a different path, feel free to start a new game.\n''')
+                    print(
+                        'You choose to look for an alternate route around the fallen tree.\n'
+                        'After carefully scouting the area,\n'
+                        'you spot a narrow path that veers off to the side, bypassing the obstacle.\n'
+                        'You navigate through the path,\n'
+                        'squeezing between rocks and shrubs until you successfully circumvent the fallen tree.\n'
+                        'As you continue on the Narrow Pass,\n'
+                        'the terrain becomes even more treacherous.\n'
+                        'The path narrows to a mere ledge with a sheer drop on one side.\n'
+                        'The winds pick up, making it challenging to maintain your balance.\n'
+                        'Suddenly, a heavy fog rolls in, reducing visibility to almost zero.\n'
+                        'You find yourself disoriented and unsure of which direction to proceed.\n'
+                        'Every step feels uncertain,\n'
+                        'and the danger of slipping off the edge becomes even more real.\n'
+                        'With no clear path forward and the risks escalating,\n'
+                        'you decide it is best to turn back and find an alternative route.\n'
+                        'You carefully retrace your steps, keeping close to the mountain wall for safety.\n'
+                        'You make it back to the fork in the path\n'
+                        'and decide to choose a different option on your next adventure.\n'
+                        'Thank you for playing!\n'
+                        'If you would like to try again or explore a different path,\n'
+                        'feel free to start a new game.\n')
                     exit(play_again)
                 else:
                     if answer not in valid_characters:
@@ -404,7 +453,7 @@ def crossroads_game():
             After walking for a while, you come across a small fishing village.
             The villagers are friendly and offer you a warm welcome.
             They tell you about a legendary treasure hidden on a nearby island but warn you about the dangerous sea creatures that guard it.\n
-            You have two choices:\n
+            You have two choices: \n
             a) Embark on a boat to search for the hidden treasure \n
             b) Explore the village and interact with the villagers\n''').lower().strip()
         else:
@@ -421,7 +470,7 @@ def crossroads_game():
                 After what feels like an eternity of battling the elements, you finally spot the island on the horizon.
                 It is surrounded by treacherous rocks and strong currents.
                 As you approach, you notice a cave entrance that seems to lead deeper into the island.\n
-                You have two choices:\n
+                You have two choices: \n
                 a) Navigate through the treacherous rocks and currents to reach the cave entrance\n
                 b) Anchor the boat and explore the shoreline of the island\n ''').lower().strip()
                 if answer == 'a':
@@ -433,7 +482,7 @@ def crossroads_game():
                     As you explore deeper, the cave starts to reveal its secrets.\n
                     You stumble upon a series of puzzles and challenges that guard the path to the treasure.
                     It seems the ancient guardians of the treasure have set up these obstacles to protect it from intruders like yourself.\n
-                    You have two choices:\n
+                    You have two choices: \n
                     a) Take on the puzzles and challenges head-on, solving each one as you progress deeper into the cave\n
                     b) Retreat from the cave and explore the island's shoreline instead''').lower().strip()
                     if answer == 'a':
@@ -529,7 +578,7 @@ def crossroads_game():
                     print('INVALID: Enter either a or b!')
                     continue
 
-        return crossroads_game
+    return crossroads_game
 
 
 def shuffle_games():
@@ -550,7 +599,7 @@ def main():
     """
     # input_validation()
     # get_username()
-    forest_game()
+    # forest_game()
     crossroads_game()
     # shuffle_games()
     # play_again()
