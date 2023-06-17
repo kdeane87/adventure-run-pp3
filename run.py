@@ -18,6 +18,8 @@ def get_username():
             print('Welcome', username, 'lets get started')
             break
 
+    return get_username
+
 
 def input_validation():
     '''
@@ -45,10 +47,6 @@ def play_again():
     This is called after game is over and gives choice to play again
     '''
     valid_characters = ('yes', 'no')
-    game1 = forest_game()
-    game2 = crossroads_game()
-
-    game_list = [game1, game2]
 
     while True:
         print(
@@ -63,7 +61,8 @@ def play_again():
             break
 
         else:
-            forest_game()
+            crossroads_game()
+
     return play_again
 
 
@@ -383,195 +382,270 @@ def crossroads_game():
                         print('INVALID: Enter either a or b!')
                         continue
             elif answer == 'b':
-                answer = input('''
-                You decide to take on the Steep Climb.
-                As you begin your ascent, the trail becomes steeper and more challenging.
-                The path zigzags up the mountainside, and you find yourself using your hands to scramble over rocks at some points.
-                As you near the top, you encounter a small cave entrance hidden among the rocks.
-                It piques your curiosity.
-                Will you enter the cave or continue on the trail? \n
-                a) Enter the cave \n
-                b) Continue on the trail\n''').lower().strip()
+                answer = input(
+                    'You decide to take on the Steep Climb.\n'
+                    'As you begin your ascent, the trail becomes steeper and more challenging.\n'
+                    'The path zigzags up the mountainside,\n'
+                    'and you find yourself using your hands to scramble over rocks at some points.\n'
+                    'As you near the top, you encounter a small cave entrance hidden among the rocks.\n'
+                    'It piques your curiosity.\n'
+                    'Will you enter the cave or continue on the trail?\n'
+                    'a) Enter the cave\n'
+                    'b) Continue on the trail\n').lower().strip()
             else:
                 if answer not in valid_characters:
                     print('INVALID: Enter either a or b!')
                     continue
                 if answer == 'a':
-                    print('''
-                    You bravely decide to enter the cave, intrigued by what secrets it might hold.
-                    The inside of the cave is dimly lit, and you can hear the sound of dripping water echoing through the chamber.
-                    As you cautiously make your way deeper into the cave, you stumble upon a hidden treasure chest resting on a stone pedestal.
-                    You approach the chest with a mix of excitement and trepidation.
-                    With trembling hands, you slowly lift the lid, and to your amazement, it reveals a dazzling array of jewels, gold coins, and ancient artifacts.
-                    You have stumbled upon a long-lost treasure! Overwhelmed by your discovery, you realize that this adventure has come to a fortunate end.
-                    With the treasure in your possession, you exit the cave and make your way back down the mountain, carrying the memories of this incredible journey with you.
-                    Congratulations on completing the adventure! Thank you for playing.
-                    If you would like to embark on another adventure, feel free to start a new game.''')
+                    print(
+                        'You bravely decide to enter the cave,\n'
+                        'intrigued by what secrets it might hold.\n'
+                        'The inside of the cave is dimly lit,\n'
+                        'and you can hear the sound of dripping water echoing through the chamber.\n'
+                        'As you cautiously make your way deeper into the cave,\n'
+                        'you stumble upon a hidden treasure chest resting on a stone pedestal.\n'
+                        'You approach the chest with a mix of excitement and trepidation.\n'
+                        'With trembling hands, you slowly lift the lid,\n'
+                        'and to your amazement, it reveals a dazzling array of jewels,\n'
+                        'gold coins, and ancient artifacts.\n'
+                        'You have stumbled upon a long-lost treasure!\n'
+                        'Overwhelmed by your discovery, you realize that\n'
+                        'this adventure has come to a fortunate end.\n'
+                        'With the treasure in your possession,\n'
+                        'you exit the cave and make your way back down the mountain,\n'
+                        'carrying the memories of this incredible journey with you.\n'
+                        'Congratulations on completing the adventure!\n'
+                        'Thank you for playing.\n'
+                        'If you would like to embark on another adventure,\n'
+                        'feel free to start a new game.\n')
                     exit(play_again)
                 elif answer == 'b':
-                    answer = input('''
-                    You decide to continue on the trail, leaving the cave behind for now.
-                    The path becomes less steep, and you can see the magnificent view opening up before you.
-                    The sun shines brightly, casting a golden glow on the surrounding peaks and valleys.
-                    As you hike further, you notice a peculiar object glinting in the distance.
-                    As you approach, you realize it is a weathered treasure chest half-buried in the ground.
-                    It seems like a relic from a bygone era. \n
-                    What will you do? \n
-                    a) Open the treasure chest \n
-                    b) Leave the treasure chest and continue on the trail\n''').lower().strip()
+                    answer = input(
+                        'You decide to continue on the trail, leaving the cave behind for now.\n'
+                        'The path becomes less steep,\n'
+                        'and you can see the magnificent view opening up before you.\n'
+                        'The sun shines brightly,\n'
+                        'casting a golden glow on the surrounding peaks and valleys.\n'
+                        'As you hike further,\n'
+                        'you notice a peculiar object glinting in the distance.\n'
+                        'As you approach,\n'
+                        'you realize it is a weathered treasure chest half-buried in the ground.\n'
+                        'It seems like a relic from a bygone era.\n'
+                        'What will you do?\n'
+                        'a) Open the treasure chest\n'
+                        'b) Leave the treasure chest and continue on the trail\n').lower().strip()
                 else:
                     if answer not in valid_characters:
                         print('INVALID: Enter either a or b!')
                         continue
                     if answer == 'a':
-                        print('''
-                        You cannot resist the allure of the treasure chest and decide to open it.
-                        With a creak, the lid swings open, revealing a sparkling collection of jewels, gold coins, and ancient artifacts.
-                        You have stumbled upon a treasure trove!
-                        Congratulations!
-                        You have successfully completed the adventure by finding the hidden treasure.
-                        You can now bask in your newfound wealth and enjoy the rest of your journey knowing that you have had a truly remarkable adventure.\n''')
+                        print(
+                            'You cannot resist the allure of the treasure chest and decide to open it.\n'
+                            'With a creak, the lid swings open,\n'
+                            'revealing a sparkling collection of jewels,\n'
+                            'gold coins, and ancient artifacts.\n'
+                            'You have stumbled upon a treasure trove!\n'
+                            'Congratulations!\n'
+                            'You have successfully completed the adventure by finding the hidden treasure.\n'
+                            'You can now bask in your newfound wealth\n'
+                            'and enjoy the rest of your journey knowing that you have had a truly remarkable adventure.\n')
                         exit(play_again)
                     elif answer == 'b':
-                        print('''
-                        Oh no!
-                        As you decide to leave the treasure chest behind and continue on the trail, an unexpected turn of events occurs.
-                        Without warning, the ground beneath you gives way, and you find yourself falling into a hidden crevice.
-                        The fall proves fatal, and your adventure comes to an untimely end.
-                        Thank you for playing the interactive adventure game!
-                        If you would like to try again or explore a different path, feel free to start a new game.\n''')
+                        print(
+                            'Oh no!\n'
+                            'As you decide to leave the treasure chest behind and continue on the trail,\n'
+                            'an unexpected turn of events occurs.\n'
+                            'Without warning, the ground beneath you gives way,\n'
+                            'and you find yourself falling into a hidden crevice.\n'
+                            'The fall proves fatal, and your adventure comes to an untimely end.\n'
+                            'Thank you for playing the interactive adventure game!\n'
+                            'If you would like to try again or explore a different path,\n'
+                            'feel free to start a new game.\n')
                         exit(play_again)
                     else:
                         if answer not in valid_characters:
                             print('INVALID: Enter either a or b!')
                             continue
         elif answer == 'b':
-            answer = input('''
-            You decide to take the Coastal Route.
-            As you walk along the path, the sound of crashing waves fills the air, and a refreshing sea breeze brushes against your face.
-            The path winds its way along rugged cliffs, offering breathtaking views of the sparkling ocean below.
-            After walking for a while, you come across a small fishing village.
-            The villagers are friendly and offer you a warm welcome.
-            They tell you about a legendary treasure hidden on a nearby island but warn you about the dangerous sea creatures that guard it.\n
-            You have two choices: \n
-            a) Embark on a boat to search for the hidden treasure \n
-            b) Explore the village and interact with the villagers\n''').lower().strip()
+            answer = input(
+                'You decide to take the Coastal Route.\n'
+                'As you walk along the path,\n'
+                'the sound of crashing waves fills the air,\n'
+                'and a refreshing sea breeze brushes against your face.\n'
+                'The path winds its way along rugged cliffs,\n'
+                'offering breathtaking views of the sparkling ocean below.\n'
+                'After walking for a while, you come across a small fishing village.\n'
+                'The villagers are friendly and offer you a warm welcome.\n'
+                'They tell you about a legendary treasure hidden on a nearby island\n'
+                'but warn you about the dangerous sea creatures that guard it.\n'
+                'You have two choices:\n'
+                'a) Embark on a boat to search for the hidden treasure\n'
+                'b) Explore the village and interact with the villagers\n').lower().strip()
         else:
             if answer not in valid_characters:
                 print('INVALID: Enter either a or b!')
                 continue
             if answer == 'a':
-                answer = input('''
-                Excited by the prospect of finding the hidden treasure, you decide to embark on a boat and set off on your adventure.
-                The villagers provide you with a sturdy vessel and a map that marks the location of the island where the treasure is said to be hidden.\n
-                As you row further away from the village, the sea becomes rougher, and dark clouds gather in the sky.
-                The waves crash against the sides of the boat, testing your determination.
-                But you push forward, fueled by the allure of the treasure.\n
-                After what feels like an eternity of battling the elements, you finally spot the island on the horizon.
-                It is surrounded by treacherous rocks and strong currents.
-                As you approach, you notice a cave entrance that seems to lead deeper into the island.\n
-                You have two choices: \n
-                a) Navigate through the treacherous rocks and currents to reach the cave entrance\n
-                b) Anchor the boat and explore the shoreline of the island\n ''').lower().strip()
+                answer = input(
+                    'Excited by the prospect of finding the hidden treasure,\n'
+                    'you decide to embark on a boat and set off on your adventure.\n'
+                    'The villagers provide you with a sturdy vessel\n'
+                    'and a map that marks the location of the island where\n'
+                    'the treasure is said to be hidden.\n'
+                    'As you row further away from the village,\n'
+                    'the sea becomes rougher, and dark clouds gather in the sky.\n'
+                    'The waves crash against the sides of the boat,\n'
+                    'testing your determination.\n'
+                    'But you push forward, fueled by the allure of the treasure.\n'
+                    'After what feels like an eternity of battling the elements,\n'
+                    'you finally spot the island on the horizon.\n'
+                    'It is surrounded by treacherous rocks and strong currents.\n'
+                    'As you approach,\n'
+                    'you notice a cave entrance that seems to lead deeper into the island.\n'
+                    'You have two choices:\n'
+                    'a) Navigate through the treacherous rocks and currents to reach the cave entrance\n'
+                    'b) Anchor the boat and explore the shoreline of the island\n').lower().strip()
                 if answer == 'a':
-                    answer = input('''
-                    With determination in your heart, you carefully navigate through the treacherous rocks and currents, steering the boat towards the cave entrance.
-                    The waves crash against the sides of the vessel, challenging your skill as a sailor.\n
-                    After a heart-pounding journey, you successfully enter the cave.
-                    Inside, you find yourself surrounded by darkness, the only source of light coming from a small opening above.
-                    As you explore deeper, the cave starts to reveal its secrets.\n
-                    You stumble upon a series of puzzles and challenges that guard the path to the treasure.
-                    It seems the ancient guardians of the treasure have set up these obstacles to protect it from intruders like yourself.\n
-                    You have two choices: \n
-                    a) Take on the puzzles and challenges head-on, solving each one as you progress deeper into the cave\n
-                    b) Retreat from the cave and explore the island's shoreline instead''').lower().strip()
+                    answer = input(
+                        'With determination in your heart,\n'
+                        'you carefully navigate through the treacherous rocks and currents,\n'
+                        'steering the boat towards the cave entrance.\n'
+                        'The waves crash against the sides of the vessel,\n'
+                        'challenging your skill as a sailor.\n'
+                        'After a heart-pounding journey, you successfully enter the cave.\n'
+                        'Inside, you find yourself surrounded by darkness,\n'
+                        'the only source of light coming from a small opening above.\n'
+                        'As you explore deeper, the cave starts to reveal its secrets.\n'
+                        'You stumble upon a series of puzzles\n'
+                        'and challenges that guard the path to the treasure.\n'
+                        'It seems the ancient guardians of the treasure have set up these obstacles\n'
+                        'to protect it from intruders like yourself.\n'
+                        'You have two choices:\n'
+                        'a) Take on the puzzles and challenges head-on,\n'
+                        'solving each one as you progress deeper into the cave\n'
+                        'b) Retreat from the cave and explore the islands shoreline instead\n').lower().strip()
                     if answer == 'a':
-                        print('''
-                        Oh no!
-                        As you bravely take on the puzzles and challenges, you encounter a particularly tricky one that triggers a trap.
-                        Suddenly, the ground beneath you gives way, and you plummet into a deep chasm.
-                        Your adventure comes to an unfortunate end as you meet your demise\n''')
+                        print(
+                            'Oh no!\n'
+                            'As you bravely take on the puzzles and challenges,\n'
+                            'you encounter a particularly tricky one that triggers a trap.\n'
+                            'Suddenly, the ground beneath you gives way,\n'
+                            'and you plummet into a deep chasm.\n'
+                            'Your adventure comes to an unfortunate end\n'
+                            'as you meet your demise\n')
                         exit(play_again)
                     elif answer == 'b':
-                        answer = input('''
-                        Deciding to take a break from the puzzles and challenges in the cave, you retreat back to the shoreline of the island.
-                        As you explore, you come across a secluded beach with shimmering golden sand.
-                        The soothing sound of the waves crashing against the shore relaxes your mind.
-                        While walking along the beach, you notice an old, weathered map half-buried in the sand.
-                        Curiosity piqued, you pick it up and examine it closely.
-                        It appears to be a treasure map, indicating the location of another hidden treasure somewhere on the island.\n
-                        You have two choices:\n
-                        a) Follow the clues on the map and embark on a new treasure hunt\n
-                        b) Return to the cave and resume tackling the puzzles and challenges\n''').lower().strip()
+                        answer = input(
+                            'Deciding to take a break from the puzzles and challenges in the cave,\n'
+                            'you retreat back to the shoreline of the island.\n'
+                            'As you explore, you come across a secluded beach\n'
+                            'with shimmering golden sand.\n'
+                            'The soothing sound of the waves crashing against the shore\n'
+                            'relaxes your mind.\n'
+                            'While walking along the beach, you notice an old,\n'
+                            'weathered map half-buried in the sand.\n'
+                            'Curiosity piqued, you pick it up and examine it closely.\n'
+                            'It appears to be a treasure map,\n'
+                            'indicating the location of another hidden treasure somewhere on the island.\n'
+                            'You have two choices:\n'
+                            'a) Follow the clues on the map and embark on a new treasure hunt\n'
+                            'b) Return to the cave and resume tackling the puzzles and challenges\n').lower().strip()
                     else:
                         if answer not in valid_characters:
                             print('INVALID: Enter either a or b!')
                             continue
                         if answer == 'a':
-                            print('''
-                            Oh no!
-                            As you follow the clues on the map, you find yourself in a dense jungle, filled with unknown dangers and obstacles.
-                            The path becomes increasingly treacherous, and you accidentally trigger a hidden trap.
-                            Suddenly, a spiked net falls from above, trapping you and causing severe injuries.\n
-                            With no one around to help, your adventure sadly comes to an abrupt end.\n''')
+                            print(
+                                'Oh no!\n'
+                                'As you follow the clues on the map,\n'
+                                'you find yourself in a dense jungle,\n'
+                                'filled with unknown dangers and obstacles.\n'
+                                'The path becomes increasingly treacherous,\n'
+                                'and you accidentally trigger a hidden trap.\n'
+                                'Suddenly, a spiked net falls from above,\n'
+                                'trapping you and causing severe injuries.\n'
+                                'With no one around to help, your adventure sadly comes to an abrupt end.\n')
                             exit(play_again)
                         elif answer == 'b':
-                            print('''
-                            As you make your way back to the cave, ready to face the puzzles and challenges once again, a sudden and unexpected event occurs.
-                            The ground beneath you starts to shake violently, and the walls of the cave begin to crumble.
-                            Rocks and debris rain down, blocking your path and trapping you inside.\n
-                            Despite your best efforts to escape, the collapsing cave proves to be too dangerous.
-                            Tragically, you are unable to find a way out, and the adventure comes to an unfortunate end.\n''')
+                            print(
+                                'As you make your way back to the cave,\n'
+                                'ready to face the puzzles and challenges once again,\n'
+                                'a sudden and unexpected event occurs.\n'
+                                'The ground beneath you starts to shake violently,\n'
+                                'and the walls of the cave begin to crumble.\n'
+                                'Rocks and debris rain down, blocking your path and trapping you inside.\n'
+                                'Despite your best efforts to escape,\n'
+                                'the collapsing cave proves to be too dangerous.\n'
+                                'Tragically, you are unable to find a way out,\n'
+                                'and the adventure comes to an unfortunate end.\n')
                             exit(play_again)
                         else:
                             if answer not in valid_characters:
                                 print('INVALID: Enter either a or b!')
                                 continue
                 elif answer == 'b':
-                    print('''
-                    Congratulations!
-                    You choose to anchor the boat and explore the shoreline of the island.
-                    As you step onto the sandy beach, you feel a sense of anticipation and wonder.
-                    The island is lush and vibrant, with exotic plants and colorful flowers adorning the landscape.\n
-                    As you venture further inland, you stumble upon a hidden path that leads you to a series of ancient ruins.
-                    The ruins are overrun with vegetation, but you can still see traces of intricate carvings and faded murals on the walls.\n
-                    Curiosity fuels your desire to uncover the secrets of this forgotten civilization.
-                    You explore the ruins, carefully navigating through crumbling corridors and chambers.
-                    Finally, you come across a hidden chamber at the heart of the ruins.\n
-                    Inside, you discover a pedestal adorned with ancient symbols.
-                    At the center of the pedestal lies a magnificent gemstone, glowing with an otherworldly brilliance.
-                    You have found the legendary treasure!\n
-                    As you reach out to grasp the gemstone, a surge of energy courses through your body.
-                    The treasure is said to possess mystical powers, and you can feel its magic enveloping you.
-                    You have achieved what many adventurers have dreamed of.\n
-                    With the treasure in your possession, you make your way back to the village.
-                    The villagers celebrate your triumph and express their gratitude for bringing back a piece of their island's history.\n
-                    You have successfully completed your adventure, and your name will be forever etched in the annals of treasure hunters.
-                    Well done, and thank you for playing!
-                    If you'd like to embark on another adventure, feel free to start again.\n''')
+                    print(
+                        'Congratulations!\n'
+                        'You choose to anchor the boat and explore the shoreline of the island.\n'
+                        'As you step onto the sandy beach,\n'
+                        'you feel a sense of anticipation and wonder.\n'
+                        'The island is lush and vibrant,\n'
+                        'with exotic plants and colorful flowers adorning the landscape.\n'
+                        'As you venture further inland,\n'
+                        'you stumble upon a hidden path that leads you to a series of ancient ruins.\n'
+                        'The ruins are overrun with vegetation,\n'
+                        'but you can still see traces of intricate carvings and faded murals on the walls.\n'
+                        'Curiosity fuels your desire to uncover the secrets of this forgotten civilization.\n'
+                        'You explore the ruins, carefully navigating through crumbling corridors and chambers.\n'
+                        'Finally, you come across a hidden chamber at the heart of the ruins.\n'
+                        'Inside, you discover a pedestal adorned with ancient symbols.\n'
+                        'At the center of the pedestal lies a magnificent gemstone,\n'
+                        'glowing with an otherworldly brilliance.\n'
+                        'You have found the legendary treasure!\n'
+                        'As you reach out to grasp the gemstone,\n'
+                        'a surge of energy courses through your body.\n'
+                        'The treasure is said to possess mystical powers,\n'
+                        'and you can feel its magic enveloping you.\n'
+                        'You have achieved what many adventurers have dreamed of.\n'
+                        'With the treasure in your possession,\n'
+                        'you make your way back to the village.\n'
+                        'The villagers celebrate your triumph\n'
+                        'and express their gratitude for bringing back a piece of their islands history.\n'
+                        'You have successfully completed your adventure,\n'
+                        'and your name will be forever etched in the annals of treasure hunters.\n'
+                        'Well done, and thank you for playing!\n'
+                        'If you would like to embark on another adventure, feel free to start again.\n')
                     exit(play_again)
                 else:
                     if answer not in valid_characters:
                         print('INVALID: Enter either a or b!')
                         continue
+
             elif answer == 'b':
-                print('''
-                You decide to explore the village and interact with the villagers.
-                As you engage in conversations and learn more about their way of life,
-                you start to feel a sense of belonging and decide to stay in the village for a while.
-                You enjoy the peaceful atmosphere, savoring delicious seafood and listening to the stories of the villagers.
-                Days turn into weeks, and before you know it, months have passed.
-                While you've found contentment in the village,
-                you cannot help but wonder about the hidden treasure that was mentioned earlier.
-                Regretfully, you realize that you may have missed out on a great adventure.
-                However, life in the village brings its own joys and experiences,
-                and you find happiness in the simple pleasures it offers.
-                Congratulations!
-                Though you didn't embark on a treasure hunt,
-                you found fulfillment in the village and forged connections with its residents.
-                Remember, every choice in an adventure game leads to a unique outcome.
-                If you'd like, we can start a new adventure.
-                Let me know if you're ready to try again!''')
+                print(
+                    'You decide to explore the village and interact with the villagers.\n'
+                    'As you engage in conversations and\n'
+                    'learn more about their way of life,\n'
+                    'you start to feel a sense of belonging and\n'
+                    'decide to stay in the village for a while.\n'
+                    'You enjoy the peaceful atmosphere,\n'
+                    'savoring delicious seafood and listening to the stories of the villagers.\n'
+                    'Days turn into weeks, and before you know it,\n'
+                    'months have passed.\n'
+                    'While you have found contentment in the village,\n'
+                    'you cannot help but wonder about the hidden treasure\n'
+                    'that was mentioned earlier.\n'
+                    'Regretfully, you realize that you may have missed out on a great\n'
+                    'adventure.\n'
+                    'However, life in the village brings its own joys and experiences,\n'
+                    'and you find happiness in the simple pleasures it offers.\n'
+                    'Congratulations!\n'
+                    'Though you did not embark on a treasure hunt,\n'
+                    'you found fulfillment in the village and\n'
+                    'forged connections with its residents.\n'
+                    'Remember, every choice in an adventure game leads to a unique outcome.\n'
+                    'If you would like, we can start a new adventure.\n'
+                    'Let me know if you are ready to try again!\n')
                 exit(play_again)
             else:
                 if answer not in valid_characters:
