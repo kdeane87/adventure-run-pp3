@@ -528,10 +528,6 @@ def crossroads_game():
                 if answer not in valid_characters:
                     print('INVALID: Enter either a or b!')
                     continue
-        else:
-            if answer not in valid_characters:
-                print('INVALID: Enter either a or b!')
-                continue
 
         return crossroads_game
 
@@ -555,7 +551,7 @@ def main():
     # input_validation()
     # get_username()
     forest_game()
-    # crossroads_game()
+    crossroads_game()
     # shuffle_games()
     # play_again()
 
