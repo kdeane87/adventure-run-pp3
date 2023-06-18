@@ -509,10 +509,105 @@ def crossroads_game():
 
 
 def forest_game():
-    '''
-    forest
-     '''
-    print('forest')
+    """
+    Runs the forest themed game
+    """
+    print(
+        'You find yourself at the edge of a dense forest.\n'
+        'The entrance looks dark and mysterious.\n'
+    )
+    answer = input_validation(
+        'Do you:\n'
+        'a)Enter the forest\n'
+        'b)Walk away and find a new adventure\n', ['a', 'b'])
+    if answer == 'a':
+        print(
+            'You enter the forest and walk along the winding path.\n'
+            'The trees are tall and the leaves rustle in the wind.\n'
+            'Suddenly you hear a loud growl.\n'
+        )
+        answer = input_validation(
+            'Do you:\n'
+            'a)Run away\n'
+            'b)Investigate the source of the noise\n', ['a', 'b'])
+        if answer == 'b':
+            print(
+                'You follow the sound and find a wounded wolf.\n'
+                'It looks at you with pleading eyes.\n'
+            )
+            answer = input_validation('Do you:\n'
+                                      'a)Help the wolf \n'
+                                      'b) Leave the wolf and continus on your journey\n', ['a', 'b'])
+            if answer == 'a':
+                print(
+                    'You help the wolf and bandage its wounds.\n'
+                    'The wolf is greatful and leads you to a hidden clearing.\n'
+                    'In the center of the clearing, you see a chest.\n'
+                )
+                answer = input_validation(
+                    'Do you:\n'
+                    'a)Open the chest\n'
+                    'b) Leave the chest and continue on your adventure\n', ['a', 'b'])
+                if answer == 'a':
+                    print('The chest was full of gold....You Won!')
+                    exit(play_again)
+                elif answer == 'b':
+                    print(
+                        'You leave the wolf and chest behind and continue on your way.\n'
+                        'You come to a lake, there is a boat at the shore.\n'
+                    )
+                    answer = input_validation(
+                        'Do you:\n'
+                        'a) Get into the boat\n'
+                        'b) Turn back \n', ['a', 'b'])
+                    if answer == 'a':
+                        print(
+                            'You get into the boat and start rowing out towards what appears to be an island.\n'
+                            'Suddenly a heavy fog closes in inparing your navigation.\n'
+                            'As you look over the sides of the boat you notice that\n'
+                            'theres 5 sharks circuling the boat.\n'
+                            'The boat begins to take on water and sinks.\n'
+                            'You are eaten by sharks.....Game over!\n')
+                        exit(play_again)
+                    elif answer == 'b':
+                        print(
+                            'You turn around and head back along the path.\n'
+                            'The wolf is still waiting by the chest,\n'
+                            'he is gesturing again for you to open it.\n'
+                        )
+                        answer = input_validation(
+                            'Do you:\n'
+                            'a)Open the chest\n'
+                            'b) Ignore the wolf and keep walking \n', ['a', 'b'])
+                        if answer == 'a':
+                            print('The chest was full of gold....You Won!')
+                            exit(play_again)
+                        elif answer == 'b':
+                            print(
+                                'You keep walking along the path until you fall through a trap door and die.....Game over!')
+                            exit(play_again)
+                    print(
+                        'You continue along the path leaving the wolf behind.\n'
+                        'You come to a river with an old wooden bridge.\n'
+                    )
+                    answer = input_validation(
+                        'Do you:\n'
+                        'a) Cross the bridge \n'
+                        'b)Swim across the river?\n', ['a', 'b'])
+                if answer == 'a':
+                    print(
+                        'The bridge collapsed and you were eaten by alligators.....Game over!')
+                    exit(play_again)
+                elif answer == 'b':
+                    print(
+                        'The river was full of alligators and you were eaten.....Game over!')
+                    exit(play_again)
+        elif answer == 'a':
+            print('You ran away, Game over!')
+            exit(play_again)
+    elif answer == 'b':
+        print('You left the game\n')
+        exit(play_again)
 
     return forest_game
 
