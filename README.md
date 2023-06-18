@@ -11,7 +11,7 @@ This game was created as part of my Full Stack Diploma course. It is a fully int
 
 
 
-- Click on run program is game has not started automatically.
+- Click on run program if game has not started automatically, or at any point to restart game.
 
 - You will be prompted for your name. It is a requirement to enter a name.
 
