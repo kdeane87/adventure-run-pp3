@@ -76,7 +76,7 @@ This game was created as part of my Full Stack Diploma course. It is a fully int
 
 **Deployment**
 
-This project was deployed using Code Institute' mock terminal for heroku.
+This project was deployed using Code Institute's mock terminal for heroku.
 
 - Steps for deployment.
 
