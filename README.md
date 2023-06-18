@@ -15,11 +15,11 @@ This game was created as part of my Full Stack Diploma course. It is a fully int
 
 - You will be prompted for your name. It is a requirement to enter a name.
 
-- Once you enter a username click enter.
+- Once you input a username press enter.
 
 - You will be presented with your first scenario.
 
-- Chose between a or b.
+- Choose between a or b and press enter.
 
 - If you chose anything other than a or b you will recieve an error and will be asked to re-enter your answer.
 
