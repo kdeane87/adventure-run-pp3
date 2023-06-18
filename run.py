@@ -72,9 +72,10 @@ def crossroads_game():
             'not knowing which path to take.\n'
         )
         answer = input_validation(
-            'You have two options:\n''a)The mountain trail\n''b) The coastal route \n', ['a', 'b'])
+            'You have two options:\n''a)The mountain trail\n'
+            'b) The coastal route \n', ['a', 'b'])
         if answer == 'a':
-            answer = input(
+            print(
                 'Great choice! You decide to embark on the Mountain Trail.\n'
                 'As you start your ascent, the air becomes crisper,\n'
                 'and the scenery more breathtaking.\n'
@@ -83,11 +84,12 @@ def crossroads_game():
                 'After walking for a while,\n'
                 'you stumble upon a fork in the path.\n'
                 'You notice a signpost, but it is worn and difficult to read.\n'
+            )
+            answer = input_validation(
                 'There seem to be two options:\n'
-                'a) The narrow pass\n'
-                'b) The steep climb\n').lower().strip()
+                'a) The narrow pass\nb) The steep climb\n', ['a', 'b'])
             if answer == 'a':
-                answer = input(
+                print(
                     'You decide to take the Narrow Pass.\n'
                     'The path becomes increasingly narrow and\n'
                     'steep as you make your way through the rugged mountainside.\n'
@@ -96,11 +98,13 @@ def crossroads_game():
                     'As you continue,\n'
                     'you encounter a fallen tree blocking the path.\n'
                     'It seems like you will not be able to pass through it easily.\n'
+                )
+                answer = input_validation(
                     'What would you like to do?\n'
                     'a) Attempt to climb over the fallen tree \n'
-                    'b) Look for an alternative route \n').lower().strip()
+                    'b) Look for an alternative route \n', ['a', 'b'])
                 if answer == 'a':
-                    answer = input(
+                    print(
                         'You decide to attempt to climb over the fallen tree.\n'
                         'With careful steps and a bit of effort,\n'
                         'you manage to scramble over the obstacle and\n'
@@ -112,9 +116,13 @@ def crossroads_game():
                         'It is a breathtaking sight.\n'
                         'However, the path ahead seems to split into two distinct routes:\n'
                         'a) Follow the path leading closer to the waterfall\n'
-                        'b) Take the path that veers away from the waterfall\n').lower().strip()
+                        'b) Take the path that veers away from the waterfall\n')
+                    answer = input_validation(
+                        'However, the path ahead seems to split into two distinct routes:\n'
+                        'a) Follow the path leading closer to the waterfall\n'
+                        'b) Take the path that veers away from the waterfall\n', ['a', 'b'])
                     if answer == 'a':
-                        answer = input(
+                        print(
                             'You choose to follow the path leading closer to the waterfall.\n'
                             'The sound of rushing water becomes even more thunderous as you approach.\n'
                             'The path becomes misty, and you can feel a refreshing spray on your face.\n'
@@ -122,9 +130,11 @@ def crossroads_game():
                             'its powerful currents crashing against the rocks below.\n'
                             'As you stand in awe, you notice a small cave tucked behind the waterfall.\n'
                             'It is shrouded in mystery and beckons you to explore its depths.\n'
+                        )
+                        answer = input_validation(
                             'What would you like to do?\n'
                             'a) Enter the cave and explore its secrets\n'
-                            'b) Continue along the path, leaving the cave behind \n').lower().strip()
+                            'b) Continue along the path, leaving the cave behind \n', ['a', 'b'])
                         if answer == 'a':
                             print(
                                 'You decide to enter the cave and explore its secrets.\n'
@@ -164,12 +174,8 @@ def crossroads_game():
                                 'If you would like to embark on another adventure\n'
                                 'or explore a different path, feel free to start a new game.\n')
                             exit(play_again)
-                        else:
-                            if answer not in valid_characters:
-                                print('INVALID: Enter either a or b!')
-                                continue
                     elif answer == 'b':
-                        answer = input(
+                        print(
                             'You decide to take the path that veers away from the waterfall.\n'
                             'As you move away from the captivating sight of the waterfall,\n'
                             'the trail leads you deeper into the mountainous terrain.\n'
@@ -177,14 +183,12 @@ def crossroads_game():
                             'After a while, you stumble upon an ancient stone bridge spanning a deep ravine.\n'
                             'The bridge appears old and weathered,\n'
                             'with some missing stones and cracks.\n'
-                            'It looks risky to cross.\n'
+                            'It looks risky too cross.\n'
+                        )
+                        answer = input_validation(
                             'What would you like to do?\n'
                             'a) Take a leap of faith and try to cross the bridge\n'
-                            'b) Look for an alternative route to bypass the bridge\n').lower().strip()
-                    else:
-                        if answer not in valid_characters:
-                            print('INVALID: Enter either a or b!')
-                            continue
+                            'b) Look for an alternative route to bypass the bridge\n', ['a', 'b'])
                         if answer == 'a':
                             print(
                                 'You gather your courage and decide to take a leap of faith,\n'
@@ -251,22 +255,19 @@ def crossroads_game():
                         'If you would like to try again or explore a different path,\n'
                         'feel free to start a new game.\n')
                     exit(play_again)
-                else:
-                    if answer not in valid_characters:
-                        print('INVALID: Enter either a or b!')
-                        continue
             elif answer == 'b':
-                answer = input(
+                print(
                     'You decide to take on the Steep Climb.\n'
                     'As you begin your ascent, the trail becomes steeper and more challenging.\n'
                     'The path zigzags up the mountainside,\n'
                     'and you find yourself using your hands to scramble over rocks at some points.\n'
                     'As you near the top, you encounter a small cave entrance hidden among the rocks.\n'
                     'It piques your curiosity.\n'
+                )
+                answer = input_validation(
                     'Will you enter the cave or continue on the trail?\n'
                     'a) Enter the cave\n'
-                    'b) Continue on the trail\n').lower().strip()
-
+                    'b) Continue on the trail\n', ['a', 'b'])
                 if answer == 'a':
                     print(
                         'You bravely decide to enter the cave,\n'
@@ -291,7 +292,7 @@ def crossroads_game():
                         'feel free to start a new game.\n')
                     exit(play_again)
                 elif answer == 'b':
-                    answer = input(
+                    print(
                         'You decide to continue on the trail, leaving the cave behind for now.\n'
                         'The path becomes less steep,\n'
                         'and you can see the magnificent view opening up before you.\n'
@@ -302,13 +303,11 @@ def crossroads_game():
                         'As you approach,\n'
                         'you realize it is a weathered treasure chest half-buried in the ground.\n'
                         'It seems like a relic from a bygone era.\n'
+                    )
+                    answer = input_validation(
                         'What will you do?\n'
                         'a) Open the treasure chest\n'
-                        'b) Leave the treasure chest and continue on the trail\n').lower().strip()
-                else:
-                    if answer not in valid_characters:
-                        print('INVALID: Enter either a or b!')
-                        continue
+                        'b) Leave the treasure chest and continue on the trail\n', ['a', 'b'])
                     if answer == 'a':
                         print(
                             'You cannot resist the allure of the treasure chest and decide to open it.\n'
@@ -333,10 +332,6 @@ def crossroads_game():
                             'If you would like to try again or explore a different path,\n'
                             'feel free to start a new game.\n')
                         exit(play_again)
-                    else:
-                        if answer not in valid_characters:
-                            print('INVALID: Enter either a or b!')
-                            continue
         elif answer == 'b':
             print(
                 'You decide to take the Coastal Route.\n'
@@ -353,9 +348,11 @@ def crossroads_game():
                 'a) Embark on a boat to search for the hidden treasure\n'
                 'b) Explore the village and interact with the villagers\n')
             answer = input_validation(
-                'You have two choices:\na) Embark on a boat to search for the hidden treasure\nb) Explore the village and interact with the villagers\n', ['a', 'b'])
+                'You have two choices:\n'
+                'a) Embark on a boat to search for the hidden treasure\n'
+                'b) Explore the village and interact with the villagers\n', ['a', 'b'])
             if answer == 'a':
-                answer = input(
+                print(
                     'Excited by the prospect of finding the hidden treasure,\n'
                     'you decide to embark on a boat and set off on your adventure.\n'
                     'The villagers provide you with a sturdy vessel\n'
@@ -371,11 +368,13 @@ def crossroads_game():
                     'It is surrounded by treacherous rocks and strong currents.\n'
                     'As you approach,\n'
                     'you notice a cave entrance that seems to lead deeper into the island.\n'
+                )
+                answer = input_validation(
                     'You have two choices:\n'
                     'a) Navigate through the treacherous rocks and currents to reach the cave entrance\n'
-                    'b) Anchor the boat and explore the shoreline of the island\n').lower().strip()
+                    'b) Anchor the boat and explore the shoreline of the island\n', ['a', 'b'])
                 if answer == 'a':
-                    answer = input(
+                    print(
                         'With determination in your heart,\n'
                         'you carefully navigate through the treacherous rocks and currents,\n'
                         'steering the boat towards the cave entrance.\n'
@@ -389,10 +388,12 @@ def crossroads_game():
                         'and challenges that guard the path to the treasure.\n'
                         'It seems the ancient guardians of the treasure have set up these obstacles\n'
                         'to protect it from intruders like yourself.\n'
+                    )
+                    answer = input_validation(
                         'You have two choices:\n'
                         'a) Take on the puzzles and challenges head-on,\n'
                         'solving each one as you progress deeper into the cave\n'
-                        'b) Retreat from the cave and explore the islands shoreline instead\n').lower().strip()
+                        'b) Retreat from the cave and explore the islands shoreline instead\n', ['a', 'b'])
                     if answer == 'a':
                         print(
                             'Oh no!\n'
@@ -404,7 +405,7 @@ def crossroads_game():
                             'as you meet your demise\n')
                         exit(play_again)
                     elif answer == 'b':
-                        answer = input(
+                        print(
                             'Deciding to take a break from the puzzles and challenges in the cave,\n'
                             'you retreat back to the shoreline of the island.\n'
                             'As you explore, you come across a secluded beach\n'
@@ -416,13 +417,11 @@ def crossroads_game():
                             'Curiosity piqued, you pick it up and examine it closely.\n'
                             'It appears to be a treasure map,\n'
                             'indicating the location of another hidden treasure somewhere on the island.\n'
+                        )
+                        answer = input_validation(
                             'You have two choices:\n'
                             'a) Follow the clues on the map and embark on a new treasure hunt\n'
-                            'b) Return to the cave and resume tackling the puzzles and challenges\n').lower().strip()
-                    else:
-                        if answer not in valid_characters:
-                            print('INVALID: Enter either a or b!')
-                            continue
+                            'b) Return to the cave and resume tackling the puzzles and challenges\n', ['a', 'b'])
                         if answer == 'a':
                             print(
                                 'Oh no!\n'
@@ -448,10 +447,6 @@ def crossroads_game():
                                 'Tragically, you are unable to find a way out,\n'
                                 'and the adventure comes to an unfortunate end.\n')
                             exit(play_again)
-                        else:
-                            if answer not in valid_characters:
-                                print('INVALID: Enter either a or b!')
-                                continue
                 elif answer == 'b':
                     print(
                         'Congratulations!\n'
@@ -485,10 +480,6 @@ def crossroads_game():
                         'Well done, and thank you for playing!\n'
                         'If you would like to embark on another adventure, feel free to start again.\n')
                     exit(play_again)
-                else:
-                    if answer not in valid_characters:
-                        print('INVALID: Enter either a or b!')
-                        continue
 
             elif answer == 'b':
                 print(
@@ -516,10 +507,6 @@ def crossroads_game():
                     'If you would like, we can start a new adventure.\n'
                     'Let me know if you are ready to try again!\n')
                 exit(play_again)
-            else:
-                if answer not in valid_characters:
-                    print('INVALID: Enter either a or b!')
-                    continue
 
     return crossroads_game
 
