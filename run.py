@@ -1,5 +1,7 @@
-"""Imports random used for shuffle_games"""
+"""Imports random used for shuffle_games and colorama for text color"""
 import random
+from colorama import Fore, Back, Style
+colorama.init(autoreset=True)
 
 
 def get_username():
