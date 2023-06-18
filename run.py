@@ -68,7 +68,6 @@ def crossroads_game():
     """
     Runs the crossroads game
     """
-    valid_characters = ('a', 'b')
 
     print(
         'You find yourself standing at a crossroad,\n'
@@ -537,7 +536,7 @@ def main():
     Main function that calls all functions
     """
     # input_validation()
-   # get_username()
+    get_username()
     # forest_game()
     # crossroads_game()
     # shuffle_games()
