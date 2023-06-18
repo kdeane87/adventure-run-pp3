@@ -54,7 +54,7 @@ def play_again():
     while True:
         print(Fore.GREEN +
               'Do you want to play again? \n yes or no')
-        user_input = input('')
+        user_input = input('').lower()
 
         if user_input not in valid_characters:
             print(Fore.RED + 'INVALID: Enter either yes or no!')
