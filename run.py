@@ -1,7 +1,7 @@
 """Imports random used for shuffle_games and colorama for text color"""
 import random
 import colorama
-from colorama import Fore, Back, Style
+from colorama import Fore
 
 colorama.init(autoreset=True)
 
