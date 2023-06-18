@@ -78,13 +78,13 @@ This game was created as part of my Full Stack Diploma course. It is a fully int
 
 This project was deployed using Code Institute's mock terminal for heroku.
 
-- Steps for deployment.
+Steps for deployment.
 
 - Fork or clone this repository.
 
 - Create a new heroku app.
 
-- Set the buildbacks to python and nodeJS in that order.
+- Set the buildpacks to python and nodeJS in that order.
 
 - Link the heroku app to the repository.
 
@@ -99,9 +99,9 @@ This project was deployed using Code Institute's mock terminal for heroku.
 
 - Chat gpt for the game storyline.
 
-- assets/images/Screenshot 2023-06-18 054155.png for responsive image.
+- https://amiresponsive.co.uk/ for responsive image.
 
-- assets/images/Screenshot 2023-06-18 054155.png for tutorial on how to install and use colorama.
+- https://www.youtube.com/watch?v=u51Zjlnui4Y for tutorial on how to install and use colorama.
 
 
 
