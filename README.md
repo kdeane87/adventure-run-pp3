@@ -1,31 +1,109 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# ADVENTURE run!
 
-Welcome kdeane87,
+This game was created as part of my Full Stack Diploma course. It is a fully interactive adventure game with multiple endings. There are 2 seperate storylines. One story starts at the entrance of a forest, the other at a crossroads. The aim of the game is to choose your own path leading to a variety of endings. 
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+[HERE is the live game](https://adventure-game3-250fc2c720c9.herokuapp.com/)
 
-## Reminders
+![Responsive image](assets/images/Screenshot%202023-06-18%20054155.png)
 
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
 
-## Creating the Heroku app
+## How to play
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
 
-1. `heroku/python`
-2. `heroku/nodejs`
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+- Click on run program is game has not started automatically.
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+- You will be prompted for your name. It is a requirement to enter a name.
 
-Connect your GitHub repository and deploy as normal.
+- Once you enter a username click enter.
 
-## Constraints
+- You will be presented with your first scenario.
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+- Chose between a or b.
 
------
-Happy coding!
+- If you chose anything other than a or b you will recieve an error and will be asked to re-enter your answer.
+
+- Depending on your choice you will be presented with a new scenario.
+
+- The game will continue until you come to and ending.
+
+- Once the game ends you will prompted on whether you wish to play again or not. Enter either yes or no.
+
+- If you decide to play again the game will start over, randomly choosing between 2 possible games.
+
+
+
+**Features**
+
+- Random generation between two possible games.
+
+- Colorized text for easier reading and a better experience
+
+![Colorized text image](assets/images/Screenshot%202023-06-18%20053527.png)
+
+- Choose between a variety of possible endings.
+
+- Fully interactive game, with prompts and errors thrown to guide you, if incorrect input is inserted.
+
+
+**Future Features**
+
+- Add more games 
+
+- Expand current storylines.
+
+
+**Data Model**
+
+ I Built each game using if/elif statements, nested and within functions. I used a while loop to get username and validate its input. I also used while loops for play again function, input validation and shuffle games function.
+
+
+**Testing**
+
+- Passed the code through a pep8 linter. 
+
+- Manually went through the game in great detail testing that all error handling was working correctly.
+
+- Tested in my local terminal and the Code Institute heroku terminal.
+
+
+**Bugs/Problems/Fixes**
+
+- Line too long errors showing. I kept it as compact as possible, the lines are text from the storyline, not code, so its not an issue regarding functioning or readibility.
+
+![Errors found](assets/images/Screenshot%202023-06-18%20061421.png)
+
+
+**Deployment**
+
+This project was deployed using Code Institute' mock terminal for heroku.
+
+- Steps for deployment.
+
+- Fork or clone this repository.
+
+- Create a new heroku app.
+
+- Set the buildbacks to python and nodeJS in that order.
+
+- Link the heroku app to the repository.
+
+- Click on deploy.
+
+
+**Credits**
+
+- Code Institute for the deployment terminal.
+
+- Code Institute for the README template.
+
+- Chat gpt for the game storyline.
+
+- assets/images/Screenshot 2023-06-18 054155.png for responsive image.
+
+- assets/images/Screenshot 2023-06-18 054155.png for tutorial on how to install and use colorama.
+
+
+
+
+
