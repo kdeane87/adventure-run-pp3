@@ -21,23 +21,18 @@ def get_username():
     return get_username
 
 
-def input_validation():
+def input_validation(prompt, options):
     '''
     Validates the users input
     '''
-    valid_characters = ('a', 'b')
-
     while True:
         print()
-        user_input = input('Enter a) or b)....')
-
-        if user_input not in valid_characters:
-            print('INVALID: Enter either a) or b)!')
+        user_input = input(prompt).lower()
+        if user_input in options:
+            return user_input
 
         else:
-            break
-
-    print(f'You enter {user_input}')
+            print("invalid input. Please try again.")
 
     return input_validation
 
@@ -72,12 +67,12 @@ def crossroads_game():
     """
     valid_characters = ('a', 'b')
     while True:
-        answer = input(
+        print(
             'You find yourself standing at a crossroad,\n'
             'not knowing which path to take.\n'
-            'You have two options:\n'
-            'a)The mountain trail\n'
-            'b) The coastal route \n')
+        )
+        answer = input_validation(
+            'You have two options:\n''a)The mountain trail\n''b) The coastal route \n', ['a', 'b'])
         if answer == 'a':
             answer = input(
                 'Great choice! You decide to embark on the Mountain Trail.\n'
@@ -271,10 +266,7 @@ def crossroads_game():
                     'Will you enter the cave or continue on the trail?\n'
                     'a) Enter the cave\n'
                     'b) Continue on the trail\n').lower().strip()
-            else:
-                if answer not in valid_characters:
-                    print('INVALID: Enter either a or b!')
-                    continue
+
                 if answer == 'a':
                     print(
                         'You bravely decide to enter the cave,\n'
@@ -346,7 +338,7 @@ def crossroads_game():
                             print('INVALID: Enter either a or b!')
                             continue
         elif answer == 'b':
-            answer = input(
+            print(
                 'You decide to take the Coastal Route.\n'
                 'As you walk along the path,\n'
                 'the sound of crashing waves fills the air,\n'
@@ -359,11 +351,9 @@ def crossroads_game():
                 'but warn you about the dangerous sea creatures that guard it.\n'
                 'You have two choices:\n'
                 'a) Embark on a boat to search for the hidden treasure\n'
-                'b) Explore the village and interact with the villagers\n').lower().strip()
-        else:
-            if answer not in valid_characters:
-                print('INVALID: Enter either a or b!')
-                continue
+                'b) Explore the village and interact with the villagers\n')
+            answer = input_validation(
+                'You have two choices:\na) Embark on a boat to search for the hidden treasure\nb) Explore the village and interact with the villagers\n', ['a', 'b'])
             if answer == 'a':
                 answer = input(
                     'Excited by the prospect of finding the hidden treasure,\n'
